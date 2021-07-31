@@ -204,7 +204,7 @@ function drop(ev) {
 
     <div class="main b">
       <div class="home-container b">
-        <a href="#experienceandacheivements" id="experience">Click here to know my work experience and Achievements!</a>
+        <a href="#experienceandacheivements" id="experience">Click here to know my Journey!</a>
         <div class="home-container-header">
           <div class="home-container-header-image" >
             
@@ -406,22 +406,20 @@ function drop(ev) {
           </div>
 
           <div id="web-body" class="pro-desc">
-            <h2>Social Media App</h2>
+            <h2>Food Waste Management</h2>
             <br>
-            <p>
-              Full stack, fully-featured social media application using React, Mongo DB, Redux, Express, and Material-UI.A simple social media app including chat feature and also this lets the users able to post. It has the following features : <br>user login, sign up, and authentication Customize your user profile and their posts Following and unfollowing othersLiking, commenting, and saving other users posts
-            </p>
+            <p>Food Waste Management is a full stack web application that enable user to login and post the food availability in their areas or known location. And any one to see the post from other people and able to track the location and directions from their current location. Tech Stack used: MongoDB, (Mongoose), Node.js, React, Express,Material-UI, Mapbox-gl, ftp-mail, JWT (Authentication), Redux, (React-Redux), React-swipeable-views</p>
           </div>
           <div id="web-button" class="pro-navi">
-            <a href="https://mern-social-media.netlify.app/" target="_blank">open website</a>
-            <a href="https://github.com/jagan9/socila-media-client" target="_blank">Git Repo</a>
+            <a href="https://food-waste-managements.netlify.app/#/" target="_blank">open website</a>
+            <a href="https://github.com/BALASHEKHAR/food-waste-management-client" target="_blank">Git Repo</a>
           </div>
         </div>
 
         <div data-aos="fade-left" class="project-img">
 
           <img class="img-a" src="images/118-1185326_computer-frames-for-youtube-videos-png.png" alt="">
-          <img id="web-img" class="img-b" src="images/socialMedia.png" alt="">
+          <img id="web-img" class="img-b" src="images/foodwaste.png" alt="">
         </div>
           </div>
 
@@ -433,7 +431,7 @@ function drop(ev) {
         <div  class="project-main2">
           <div data-aos="fade-left" class="project-img2">
 
-          <img class="img-a2" src="images/Subtract.png" alt="">
+          <img id="dark-back-img2" class="img-a2" src="images/Subtract.png" alt="">
           <img id="android-img" class="img-b2" src="images/app0.png" alt="">
         </div>
           <div data-aos="fade-right" class="projects-container1">
@@ -495,7 +493,7 @@ function drop(ev) {
       </div>
       <div data-aos="fade-down"  id="train" class="animate__animated animate__bounceInDown experience-container-train">
         <div id="trainImg" class="main-train" style="background-position:0px;transition: 0.5s ease;">
-          <div class="carJ"><img src="images/car (1).png" alt=""></div>
+          <div  class="carJ"><img src="images/zeep.png" alt=""></div>
           <button id="closeJ" class="e-close"><i class="fas fa-times"></i> close</button>
           <button id="leftJ" class="e-left"><i class="fas fa-arrow-circle-left"></i></button>
           <button  id="rightJ" class="e-right"><i class="fas fa-arrow-circle-right"></i></button>
@@ -842,6 +840,9 @@ tab4.addEventListener('click',()=>{
     btn.addEventListener('click',()=>{
       if(darkmode===false)
     {
+     
+
+      document.getElementById("dark-back-img2").src="images/subtractdark.jpg"
       darkmode=!darkmode;
        
         
@@ -877,6 +878,7 @@ tab4.addEventListener('click',()=>{
     }
     else 
     {
+       document.getElementById("dark-back-img2").src="images/Subtract.png"
      
       darkmode=!darkmode;
        if(window.innerWidth>700)
@@ -983,18 +985,18 @@ tab4.addEventListener('click',()=>{
       switch(no)
       {
         case 0:
-        webimg.src="images/socialMedia (1).png";
-        webbody.getElementsByTagName('h2')[0].textContent="Social Media App"
-        webbody.getElementsByTagName('p')[0].textContent="Full stack, fully-featured social media application using React, Mongo DB, Redux, Express, and Material-UI.A simple social media app including chat feature and also this lets the users able to post. It has the following features :user login, sign up, and authentication Customize your user profile and their posts Following and unfollowing othersLiking, commenting, and saving other users posts"
-          webbutton.getElementsByTagName('a')[0].href="https://mern-social-media.netlify.app/";
-          webbutton.getElementsByTagName('a')[1].href="https://github.com/jagan9/socila-media-client";
+        webimg.src="images/foodwaste.png";
+        webbody.getElementsByTagName('h2')[0].textContent="Food Waste Management"
+        webbody.getElementsByTagName('p')[0].textContent="Food Waste Management is a full stack web application that enable user to login and post the food availability in their areas or known location. And any one to see the post from other people and able to track the location and directions from their current location. Tech Stack used: MongoDB, (Mongoose), Node.js, React, Express,Material-UI, Mapbox-gl, ftp-mail, JWT (Authentication), Redux, (React-Redux), React-swipeable-views"
+          webbutton.getElementsByTagName('a')[0].href="https://food-waste-managements.netlify.app/#/";
+          webbutton.getElementsByTagName('a')[1].href="https://github.com/BALASHEKHAR/food-waste-management-client";
 
         break;
         case 1:
          webimg.src="images/moretostore (1).png";
          webbody.getElementsByTagName('h2')[0].textContent="More to Store Admin Panel"
         webbody.getElementsByTagName('p')[0].textContent="More-To-Store admin panel for an app made for Android app.The website has the following features :The admin can add new items, issue items to some existing users. The admin can also view the items of more to store, an Admin can edit and delete the items if he wants. The users can create their account, search for items, edit their profile.";
-         webbutton.getElementsByTagName('a')[0].href="https://balashekhar.github.io/More-To-Store/";
+         webbutton.getElementsByTagName('a')[0].href="https://jagan9.github.io/More-to-store-admin-panel/#/";
           webbutton.getElementsByTagName('a')[1].href="https://github.com/jagan9/More-To-Store";
 
         break;
@@ -1007,11 +1009,11 @@ tab4.addEventListener('click',()=>{
 
         break;
         default:
-         webimg.src="images/socialMedia (1).png";
-          webbody.getElementsByTagName('h2')[0].textContent="Social Media App"
-         webbody.getElementsByTagName('p')[0].textContent="Full stack, fully-featured social media application using React, Mongo DB, Redux, Express, and Material-UI.A simple social media app including chat feature and also this lets the users able to post. It has the following features :user login, sign up, and authentication Customize your user profile and their posts Following and unfollowing othersLiking, commenting, and saving other users posts";
-         webbutton.getElementsByTagName('a')[0].href="https://mern-social-media.netlify.app/";
-          webbutton.getElementsByTagName('a')[1].href="https://github.com/jagan9/socila-media-client";
+         webimg.src="images/foodwaste.png";
+          webbody.getElementsByTagName('h2')[0].textContent="Food Waste Management"
+         webbody.getElementsByTagName('p')[0].textContent="Food Waste Management is a full stack web application that enable user to login and post the food availability in their areas or known location. And any one to see the post from other people and able to track the location and directions from their current location. Tech Stack used: MongoDB, (Mongoose), Node.js, React, Express,Material-UI, Mapbox-gl, ftp-mail, JWT (Authentication), Redux, (React-Redux), React-swipeable-views";
+         webbutton.getElementsByTagName('a')[0].href="https://food-waste-managements.netlify.app/#/";
+          webbutton.getElementsByTagName('a')[1].href="https://github.com/BALASHEKHAR/food-waste-management-client";
 
       
       }

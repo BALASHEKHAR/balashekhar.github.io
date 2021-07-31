@@ -175,7 +175,7 @@ cursor: pointer;
   background-position-x: center;
   background-position-y: center;
   height: 100%;
-  background-image: url('images/meWink.png');
+  background-image: url('images/balac.png');
 }
 .imag img{
   width: 100%;
@@ -221,7 +221,7 @@ cursor: pointer;
 	height: 100%;
 	object-fit: contain;
 	margin: auto;
-	filter: brightness(75%) saturate(140%);
+	filter: brightness(-75%) saturate(-140%);
 }
 .aboutme-text{
 	flex: 1.2;
@@ -1171,7 +1171,7 @@ margin-top: 40px;
    padding:10px 10px;
    margin: 40px 0px;
   /* background-image: url("images/exp (1).png");*/
-    background-image: url("images/train.svg");
+    background-image: url("images/train2.svg");
    background-repeat: no-repeat;
    background-size: cover;
    /*-3800px*/
