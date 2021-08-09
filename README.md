@@ -2,7 +2,7 @@
 # https://www.balashekhar.me/
 
 <!-- ![Homepage](https://www.linkpicture.com/q/Screenshot-203_1.png) -->
-<img src="https://www.linkpicture.com/q/Screenshot-203_1.png" width="60%">
+<img src="https://www.linkpicture.com/q/Screenshot-203_1.png" width="70%">
 
 This is the source code to my Protfolios.
 
