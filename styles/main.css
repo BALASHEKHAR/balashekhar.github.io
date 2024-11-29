@@ -52,7 +52,7 @@
   }
   
   .main{
-    background-image: url('../images/img2.png');
+    background-image: url('../assets/images/img2.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -82,7 +82,7 @@
     height: 100%;
     flex: 1;
     width: 100%;
-    background-image: url('../images/meSmile.png');
+    background-image: url('../assets/images/meSmile.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -90,7 +90,7 @@
     cursor: pointer;
   }
   .home-container-header-image:hover{
-    background-image: url('../images/meWink.png');
+    background-image: url('../assets/images/meWink.png');
     transform: scale(1.1);
     transform: 0.3s;
     cursor: pointer;
@@ -175,7 +175,7 @@
     background-position-x: center;
     background-position-y: center;
     height: 100%;
-    background-image: url('../images/balac.png');
+    background-image: url('../assets/images/balac.png');
   }
   .imag img{
     width: 100%;
@@ -288,7 +288,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-color: #fff;
-    background-image: url("../images/download.png");
+    background-image: url("../assets/images/download.png");
   }
   .edu-inner2-imge{
      margin: 30px auto;
@@ -301,7 +301,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-color: #fff;
-    background-image: url("../images/download2.jpg");
+    background-image: url("../assets/images/download2.jpg");
   }
   .edu-inner1-head{
     width: 100%;
@@ -773,7 +773,7 @@
     
     border: 1px solid #fff;
     background-position: center center;
-    background-image: url('images/118-1185326_computer-frames-for-youtube-videos-png (1).png');
+    background-image: url('assets/images/118-1185326_computer-frames-for-youtube-videos-png (1).png');
   }
   .project-img img{
     object-fit: contain;
@@ -833,7 +833,7 @@
   .form-container{
     display: flex;
     padding-bottom: 50px;
-    background-image: url("../images/pro.png");
+    background-image: url("../assets/images/pro.png");
     background-repeat: no-repeat;
   }
   .form-img-wrapper{
@@ -1010,7 +1010,7 @@
      transform: 0.3s ease;
   }
   .home-container-header-image:hover{
-    background-image: url('../images/meWink.png');
+    background-image: url('../assets/images/meWink.png');
     transform: scale(1.5);
     
     cursor: pointer;
@@ -1203,8 +1203,8 @@
      height: 100%;
      padding:10px 10px;
      margin: 40px 0px;
-    /* background-image: url("../images/exp (1).png");*/
-      background-image: url("../images/train2.png");
+    /* background-image: url("../assets/images/exp (1).png");*/
+      background-image: url("../assets/images/train2.png");
      background-repeat: no-repeat;
      background-size: cover;
      /-3800px/
