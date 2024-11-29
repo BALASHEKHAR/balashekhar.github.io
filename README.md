@@ -1,12 +1,8 @@
+A responsive personal portfolio website built with HTML, CSS and JavaScript that showcases skills, projects, education and experience in an interactive way.
 
-# [live](http://www.balashekhar.github.me)
+## Live Demo 🌟
 
-<!-- ![Homepage](https://www.linkpicture.com/q/Screenshot-203_1.png) -->
-<img src="https://www.linkpicture.com/q/Screenshot-203_1.png" width="70%">
-
-This is the source code to my Protfolio.
-
-:star: Star us on GitHub — it helps!
+[View Live Site](http://www.balashekhar.github.me)
 
 # Sections 📚
 
@@ -18,17 +14,6 @@ This is the source code to my Protfolio.
 ✔️ Journey\
 ✔️ Contact me
 
-# Technologies used 🛠️
-
-- [Html](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [Css](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [Java-script](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-
-
 # illustrations 🍥
 
 - [Figma](https://www.figma.com/)
-
-## Contributing
-
-Found a bug on my site? Think there's a feature missing? Found a typo in a blog post? File an issue or send me a pull request!

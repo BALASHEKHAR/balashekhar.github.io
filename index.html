@@ -1,491 +1,883 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="A responsive personal portfolio website built with HTML, CSS and JavaScript that showcases skills, projects, education and experience in an interactive way."
+    />
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <!-- aos -->
+    <!-- Animate On Scroll Library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Inter:wght@300&display=swap');
-  </style>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
-  </style>
-   <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
- <link rel="stylesheet" href="css.css">
-     <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="icon" type="image/x-icon" sizes="16x16" href="images/favicon-16x16.png">
-   
- <link rel="stylesheet" href="images/meSmile.png">
+    <!-- Akaya Google Fonts -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Inter:wght@300&display=swap");
+    </style>
 
- 
-  <script>
-function allowDrop(ev) {
-  ev.preventDefault();
-}
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
 
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-function addscale(n) {
+    <!-- Font Awesome Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
 
-  const dimg1=document.getElementById("drop-bar-level-img1");
-  const dimg2=document.getElementById("drop-bar-level-img2");
-  const dimg3=document.getElementById("drop-bar-level-img3");
-  
-  if(n<45)
-  {
-    dimg1.classList.add("scale");
-    dimg2.classList.remove("scale");
-    dimg3.classList.remove("scale");
-  }
-  else if(n<95)
-  {
-    dimg1.classList.add("scale");
-    dimg2.classList.add("scale");
-    dimg3.classList.remove("scale");
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css.css" />
 
-  }
-  else if(n<=100)
-  {
-    dimg1.classList.add("scale");
-    dimg2.classList.add("scale");
-    dimg3.classList.add("scale");
-  }
-  else{
-    dimg1.classList.remove("scale");
-    dimg2.classList.remove("scale");
-    dimg3.classList.remove("scale");
-  }
-  
-}
-function addDetails(title,text,np,ex) {
-   const droptext=document.getElementById("drop-text");
-   const droptitle=document.getElementById("drop-title");
-   const dropnp=document.getElementById("drop-np");
-   const dropex=document.getElementById("drop-ex");
+    <!-- Load Favicons -->
+    <script src="favicon.js"></script>
 
-   droptitle.textContent=title;
-   droptext.textContent=text;
-   dropnp.textContent=np;
-   dropex.textContent=ex;
- 
-}
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  var it=document.getElementById(data);
-  
-  ev.target.style.backgroundImage=`url(${it.src})`;
-  const bar=document.getElementById("drop-bar-line-value");
-  
-  
-  switch(it.id)
-  {
-    case "react-logo":
-    addDetails("React Js","React is an open-source front-end JavaScript library developed by Facebook for building user interfaces or UI components.","5","0.4");
-    bar.style.width="65%";
-    addscale(65);
-    break;
-    case "js-logo":
-    addDetails("Node Js","Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that executes JavaScript code outside a web browser.","5","0.6");
-    bar.style.width="60%";
-    addscale(60);
-    break;
-    case "firebase-logo":
-    addDetails("Firebase","Firebase is a cloud platform that includes services like analytics, authentication, realtime databases, configuration, file storage.","5","1");
-    bar.style.width="55%";
-    addscale(55);
-    break;
-    case "mongodo-logo":
-    addDetails("Mongo DB","MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program.","2","0.4");
-    bar.style.width="60%";
-    addscale(60);
-    break;
-     case "express-logo":
-     addDetails("Express Js","Express.js, or simply Express, is a back end web application framework for Node.js, it is designed for building web applications and APIs.","6","0.5");
-    bar.style.width="65%";
-     addscale(65);
-    break;
-    case "android-logo":
-    addDetails("Android","Android Studio is Android's official IDE. It is purpose-built for Android to accelerate your development and help you build the highest-quality apps for every Android device.","6","1");
-    bar.style.width="67%";
-     addscale(67);
-    break;
-    case "java-logo":
-    addDetails("Java","One of the most widely used programming languages, Java is used as the server-side language for most back-end development projects, including those involving big data and Android development.","2","0.1");
-    bar.style.width="40%";
-     addscale(40);
-    break;
-     case "ds-logo":
-     addDetails("Data Structures","data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data, i.e., it is an algebraic structure about data","-","-");
-    bar.style.width="60%";
-    addscale(60);
-    break;
-     case "materialui-logo":
-     addDetails("Material UI","Material-UI is an open-source project that features React components that implement Google's Material Design.","3","0.4");
-    bar.style.width="70%";
-    addscale(70);
-    break;
-     case "cplusplus-logo":
-     addDetails("C++","C++ is a powerful general-purpose programming language it supports different ways of programming like procedural, object-oriented, functional, etc,.","1","1");
-    bar.style.width="80%";
-    addscale(80);
-    break;
-     case "algo-logo":
-    bar.style.width="70%";
-    addDetails("Algorithm","Algorithm is a step-by-step procedure, which defines a set of instructions to be executed in a certain order to get the desired output. and are generally created independent of underlying languages","1","1");
-    addscale(70);
-    break;
-    case "c-logo":
-    addDetails("C","C programming is a general-purpose, procedural, imperative computer programming language. It can be used to develop software like operating systems, databases, compilers, and so on.","1","1");
-    bar.style.width="70%";
-    addscale(70);
-    break;
+    <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
 
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
 
-     case "figma-logo":
-     addDetails("Figma","Figma is a web-based graphics editing and user interface design app. You can use it to do all kinds of graphic design work from wireframing websites, designing mobile app interfaces, prototyping designs, crafting social media posts, and everything in between","1","0.4");
-    bar.style.width="40%";
-    addscale(40);
-    break;
-     case "css-logo":
-     addDetails("CSS","Cascading Style Sheets, fondly referred to as CSS, is a simple design language intended to simplify the process of making web pages presentable. CSS handles the look and feel part of a web page","5","1");
-    bar.style.width="75%";
-    addscale(75);
-    break;
-    case "xml-logo":
-    addDetails("XML","An XML file is an extensible markup language file, and it is used to structure data for storage and transport. In an XML file, there are both tags and text.","4","0.4");
-    bar.style.width="65%";
-    addscale(65);
-    break;
- case "bootstrap-logo":
- addDetails("Bootstrap","Bootstrap is a potent front-end framework used to create modern websites and web apps. It's open-source and free to use, yet features numerous HTML and CSS templates for UI interface elements such as buttons and forms.","3","0.4");
-    bar.style.width="65%";
-    addscale(65);
-    break;
+      function addscale(n) {
+        const dimg1 = document.getElementById("drop-bar-level-img1");
+        const dimg2 = document.getElementById("drop-bar-level-img2");
+        const dimg3 = document.getElementById("drop-bar-level-img3");
 
-     case "git-logo":
-     addDetails("Git","Git tracks the changes you make to files, so you have a record of what has been done, and you can revert to specific versions should you ever need to. Git also makes collaboration easier, allowing changes by multiple people to all be merged into one source.","-","1");
-    bar.style.width="33%";
-    addscale(33);
-    break;
-     case "postman-logo":
-     addDetails("Postman","Postman is an API client that makes it easy for developers to create, share, test and document APIs. This is done by allowing users to create and save simple and complex HTTP/s requests, as well as read their responses.","-","-");
-    bar.style.width="40%";
-    addscale(40);
-    break;
-     case "msexcel-logo":
-     addDetails("MS Excel","Excel is typically used to organize data and perform financial analysis. It is used across all business functions and at companies from small to large.","-","1");
-    bar.style.width="40%";
-    addscale(40);
-    break;
+        if (n < 45) {
+          dimg1.classList.add("scale");
+          dimg2.classList.remove("scale");
+          dimg3.classList.remove("scale");
+        } else if (n < 95) {
+          dimg1.classList.add("scale");
+          dimg2.classList.add("scale");
+          dimg3.classList.remove("scale");
+        } else if (n <= 100) {
+          dimg1.classList.add("scale");
+          dimg2.classList.add("scale");
+          dimg3.classList.add("scale");
+        } else {
+          dimg1.classList.remove("scale");
+          dimg2.classList.remove("scale");
+          dimg3.classList.remove("scale");
+        }
+      }
 
-    default:
-    addDetails("Drop a Skill","This is a skills record selector. It'll help you know about my skills in an interactive way. Drag a skill from the skillset and drop in the above circle! (Just tap on the skill if you are using a mobile phone)","-","-");
-    bar.style.width="0%";
-    addscale(0);
+      function addDetails(title, text, np, ex) {
+        const droptext = document.getElementById("drop-text");
+        const droptitle = document.getElementById("drop-title");
+        const dropnp = document.getElementById("drop-np");
+        const dropex = document.getElementById("drop-ex");
 
-  }
-  
+        droptitle.textContent = title;
+        droptext.textContent = text;
+        dropnp.textContent = np;
+        dropex.textContent = ex;
+      }
 
-}
-</script>
-  <title>Bala Shekhar</title>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-M244HK5');</script>
-<!-- End Google Tag Manager -->
-</head>
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        var it = document.getElementById(data);
 
-<body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M244HK5"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+        ev.target.style.backgroundImage = `url(${it.src})`;
+        const bar = document.getElementById("drop-bar-line-value");
 
+        switch (it.id) {
+          case "react-logo":
+            addDetails(
+              "React Js",
+              "React is an open-source front-end JavaScript library developed by Facebook for building user interfaces or UI components.",
+              "5",
+              "0.4"
+            );
+            bar.style.width = "65%";
+            addscale(65);
+            break;
+          case "js-logo":
+            addDetails(
+              "Node Js",
+              "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that executes JavaScript code outside a web browser.",
+              "5",
+              "0.6"
+            );
+            bar.style.width = "60%";
+            addscale(60);
+            break;
+          case "firebase-logo":
+            addDetails(
+              "Firebase",
+              "Firebase is a cloud platform that includes services like analytics, authentication, realtime databases, configuration, file storage.",
+              "5",
+              "1"
+            );
+            bar.style.width = "55%";
+            addscale(55);
+            break;
+          case "mongodo-logo":
+            addDetails(
+              "Mongo DB",
+              "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program.",
+              "2",
+              "0.4"
+            );
+            bar.style.width = "60%";
+            addscale(60);
+            break;
+          case "express-logo":
+            addDetails(
+              "Express Js",
+              "Express.js, or simply Express, is a back end web application framework for Node.js, it is designed for building web applications and APIs.",
+              "6",
+              "0.5"
+            );
+            bar.style.width = "65%";
+            addscale(65);
+            break;
+          case "android-logo":
+            addDetails(
+              "Android",
+              "Android Studio is Android's official IDE. It is purpose-built for Android to accelerate your development and help you build the highest-quality apps for every Android device.",
+              "6",
+              "1"
+            );
+            bar.style.width = "67%";
+            addscale(67);
+            break;
+          case "java-logo":
+            addDetails(
+              "Java",
+              "One of the most widely used programming languages, Java is used as the server-side language for most back-end development projects, including those involving big data and Android development.",
+              "2",
+              "0.1"
+            );
+            bar.style.width = "40%";
+            addscale(40);
+            break;
+          case "ds-logo":
+            addDetails(
+              "Data Structures",
+              "data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data, i.e., it is an algebraic structure about data",
+              "-",
+              "-"
+            );
+            bar.style.width = "60%";
+            addscale(60);
+            break;
+          case "materialui-logo":
+            addDetails(
+              "Material UI",
+              "Material-UI is an open-source project that features React components that implement Google's Material Design.",
+              "3",
+              "0.4"
+            );
+            bar.style.width = "70%";
+            addscale(70);
+            break;
+          case "cplusplus-logo":
+            addDetails(
+              "C++",
+              "C++ is a powerful general-purpose programming language it supports different ways of programming like procedural, object-oriented, functional, etc,.",
+              "1",
+              "1"
+            );
+            bar.style.width = "80%";
+            addscale(80);
+            break;
+          case "algo-logo":
+            bar.style.width = "70%";
+            addDetails(
+              "Algorithm",
+              "Algorithm is a step-by-step procedure, which defines a set of instructions to be executed in a certain order to get the desired output. and are generally created independent of underlying languages",
+              "1",
+              "1"
+            );
+            addscale(70);
+            break;
+          case "c-logo":
+            addDetails(
+              "C",
+              "C programming is a general-purpose, procedural, imperative computer programming language. It can be used to develop software like operating systems, databases, compilers, and so on.",
+              "1",
+              "1"
+            );
+            bar.style.width = "70%";
+            addscale(70);
+            break;
+
+          case "figma-logo":
+            addDetails(
+              "Figma",
+              "Figma is a web-based graphics editing and user interface design app. You can use it to do all kinds of graphic design work from wireframing websites, designing mobile app interfaces, prototyping designs, crafting social media posts, and everything in between",
+              "1",
+              "0.4"
+            );
+            bar.style.width = "40%";
+            addscale(40);
+            break;
+          case "css-logo":
+            addDetails(
+              "CSS",
+              "Cascading Style Sheets, fondly referred to as CSS, is a simple design language intended to simplify the process of making web pages presentable. CSS handles the look and feel part of a web page",
+              "5",
+              "1"
+            );
+            bar.style.width = "75%";
+            addscale(75);
+            break;
+          case "xml-logo":
+            addDetails(
+              "XML",
+              "An XML file is an extensible markup language file, and it is used to structure data for storage and transport. In an XML file, there are both tags and text.",
+              "4",
+              "0.4"
+            );
+            bar.style.width = "65%";
+            addscale(65);
+            break;
+          case "bootstrap-logo":
+            addDetails(
+              "Bootstrap",
+              "Bootstrap is a potent front-end framework used to create modern websites and web apps. It's open-source and free to use, yet features numerous HTML and CSS templates for UI interface elements such as buttons and forms.",
+              "3",
+              "0.4"
+            );
+            bar.style.width = "65%";
+            addscale(65);
+            break;
+
+          case "git-logo":
+            addDetails(
+              "Git",
+              "Git tracks the changes you make to files, so you have a record of what has been done, and you can revert to specific versions should you ever need to. Git also makes collaboration easier, allowing changes by multiple people to all be merged into one source.",
+              "-",
+              "1"
+            );
+            bar.style.width = "33%";
+            addscale(33);
+            break;
+          case "postman-logo":
+            addDetails(
+              "Postman",
+              "Postman is an API client that makes it easy for developers to create, share, test and document APIs. This is done by allowing users to create and save simple and complex HTTP/s requests, as well as read their responses.",
+              "-",
+              "-"
+            );
+            bar.style.width = "40%";
+            addscale(40);
+            break;
+          case "msexcel-logo":
+            addDetails(
+              "MS Excel",
+              "Excel is typically used to organize data and perform financial analysis. It is used across all business functions and at companies from small to large.",
+              "-",
+              "1"
+            );
+            bar.style.width = "40%";
+            addscale(40);
+            break;
+
+          default:
+            addDetails(
+              "Drop a Skill",
+              "This is a skills record selector. It'll help you know about my skills in an interactive way. Drag a skill from the skillset and drop in the above circle! (Just tap on the skill if you are using a mobile phone)",
+              "-",
+              "-"
+            );
+            bar.style.width = "0%";
+            addscale(0);
+        }
+      }
+    </script>
+    <title>bala</title>
+  </head>
+
+  <body>
     <div class="main b">
       <div class="home-container b">
-        <a href="#experienceandacheivements" id="experience">Click here to know my Journey!</a>
+        <a href="#experienceandacheivements" id="experience"
+          >Click here to know my Journey!</a
+        >
         <div class="home-container-header">
-          <div class="home-container-header-image" >
-           
-          </div>
+          <div class="home-container-header-image"></div>
           <div class="home-container-header-options">
-            <a href="#education"> <i class='fas fa-graduation-cap'></i><span>education</span> </a>
-            <a href="#skills"><i class='fas fa-cogs'> </i> <span>skills</span></a>
-            <a href="#projects">  <i class='fas fa-code'></i> <span>projects</span></a>
-            <a href="#contact"> <i class="fas fa-envelope"></i> <span>contact</span></a>
+            <a href="#education">
+              <i class="fas fa-graduation-cap"></i><span>education</span>
+            </a>
+            <a href="#skills"
+              ><i class="fas fa-cogs"> </i> <span>skills</span></a
+            >
+            <a href="#projects">
+              <i class="fas fa-code"></i> <span>projects</span></a
+            >
+            <a href="#contact">
+              <i class="fas fa-envelope"></i> <span>contact</span></a
+            >
           </div>
         </div>
         <div class="main-info">
-          <div class="theme" ><button id="theme"><i style="border-radius: 50%;font-weight: 800; color: #fff;margin-right: 5px;" class="fas fa-moon"></i><span>Lights Off</span></button></div>
+          <div class="theme">
+            <button id="theme">
+              <i
+                style="
+                  border-radius: 50%;
+                  font-weight: 800;
+                  color: #fff;
+                  margin-right: 5px;
+                "
+                class="fas fa-moon"
+              ></i
+              ><span>Lights Off</span>
+            </button>
+          </div>
           <div class="info">
             <h4>Hey there, I'm</h4>
             <h1>bala shekhar</h1>
-            <h4>Student at IIT ISM Dhanbad,a developer and a Competative Programmer.</h4>
+            <h4>
+              Student at IIT ISM Dhanbad,a developer and a Competative
+              Programmer.
+            </h4>
             <div>
-              <a target="_blank" href="https://github.com/BALASHEKHAR"><i  style="color: #000;background-color: #fff;" class="fab fa-github"></i></a>
-              <a target="_blank"  href="https://www.linkedin.com/in/kamandla-balashekhar-a91058199/"><i  style="color: #3066c0;background-color: #fff;" class="fab fa-linkedin-in"></i></a>
+              <a target="_blank" href="https://github.com/BALASHEKHAR"
+                ><i
+                  style="color: #000; background-color: #fff"
+                  class="fab fa-github"
+                ></i
+              ></a>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/kamandla-balashekhar-a91058199/"
+                ><i
+                  style="color: #3066c0; background-color: #fff"
+                  class="fab fa-linkedin-in"
+                ></i
+              ></a>
               <!-- <a   class="mailtoui" href="mailto:kamandlabalashekhar@gmail.com"><i  style="color: #c91995;background-color: #fff;" class="fas fa-envelope"></i></a> -->
-              <a target="_blank"   href="https://mail.google.com/mail/?view=cm&fs=1&to=kamandlabalashekhar@gmail.com&su=&cc=&bcc=&body="><i  style="color: #c91995;background-color: #fff;" class="fas fa-envelope"></i></a>
+              <a
+                target="_blank"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=kamandlabalashekhar@gmail.com&su=&cc=&bcc=&body="
+                ><i
+                  style="color: #c91995; background-color: #fff"
+                  class="fas fa-envelope"
+                ></i
+              ></a>
             </div>
-            <a target="_blank"  href="https://drive.google.com/file/d/1rvDLKJmkIxPe-AvfvoA2kQSVmPvxESUR/view?usp=sharing" class="footer-button"><button><i class="fas fa-file-download"></i> Download Resume</button></a>
+            <a
+              target="_blank"
+              href="https://drive.google.com/file/d/1rvDLKJmkIxPe-AvfvoA2kQSVmPvxESUR/view?usp=sharing"
+              class="footer-button"
+              ><button>
+                <i class="fas fa-file-download"></i> Download Resume
+              </button></a
+            >
           </div>
           <div class="imag">
-            <img src="images/circle.png">
+            <img src="images/circle.png" />
           </div>
         </div>
       </div>
 
-
-
-
-      <div  class="aboutme-container">
-      	<div 
-        data-aos="zoom-out-right"
-    data-aos-offset="100"
-    
-    data-aos-delay="100" class="aboutme-img"><img src="images/Personality.png"></div>
-      	<div data-aos="fade-up" 
-    data-aos-offset="100" class="aboutme-text"><h2>About Me</h2><p>Hey there, This is Bala Shekhar , final year student at IIT Dhanbad(BTech).A competitive programmer. <br>
-I find my interest in coding and finding the underlying algorithms and developing full stack web application and some android Apps. <br> So far i have learnt html, css, java-script, react, redux, mongoDB, Nodejs, express, git, java, and android. <br> I'm still enthusiastically grabbing into other programming languages and frameworks, and principles that I can integrate into my coding web.
-
-
-</p></div>
+      <div class="aboutme-container">
+        <div
+          data-aos="zoom-out-right"
+          data-aos-offset="100"
+          data-aos-delay="100"
+          class="aboutme-img"
+        >
+          <img src="images/Personality.png" />
+        </div>
+        <div data-aos="fade-up" data-aos-offset="100" class="aboutme-text">
+          <h2>About Me</h2>
+          <p>
+            Hey there, This is Bala Shekhar , final year student at IIT
+            Dhanbad(BTech).A competitive programmer. <br />
+            I find my interest in coding and finding the underlying algorithms
+            and developing full stack web application and some android Apps.
+            <br />
+            So far i have learnt html, css, java-script, react, redux, mongoDB,
+            Nodejs, express, git, java, and android. <br />
+            I'm still enthusiastically grabbing into other programming languages
+            and frameworks, and principles that I can integrate into my coding
+            web.
+          </p>
+        </div>
       </div>
 
-
-      
       <div id="education" class="education-container">
-      	<h2 data-aos="zoom-in-down">Education</h2>
-      	<div class="edu-outer">
-      	<div data-aos="fade-right" class="edu-inner1">
-      		<div class="edu-inner1-imge"></div>
-          <div class="edu-inner1-head">ZPHS Raghunathpur(SSC) <br> Narayana Junior College (Intermediate)</div>
-          <div class="edu-inner1-desc">
-          Completed my schooling in ZPHS Raghunathpur and trained for JEE Advanced exam in Narayana Jr college</div>
-          <div class="edu-inner1-text-progree-1">SSC 10th</div>
-          <div style="display: flex;height: 20px;">
-            <div class="edu-inner1-progress-1"></div>
-            <div class="percent">95.0%</div>
-          </div>  
-             
-            <br>
+        <h2 data-aos="zoom-in-down">Education</h2>
+        <div class="edu-outer">
+          <div data-aos="fade-right" class="edu-inner1">
+            <div class="edu-inner1-imge"></div>
+            <div class="edu-inner1-head">
+              ZPHS Raghunathpur(SSC) <br />
+              Narayana Junior College (Intermediate)
+            </div>
+            <div class="edu-inner1-desc">
+              Completed my schooling in ZPHS Raghunathpur and trained for JEE
+              Advanced exam in Narayana Jr college
+            </div>
+            <div class="edu-inner1-text-progree-1">SSC 10th</div>
+            <div style="display: flex; height: 20px">
+              <div class="edu-inner1-progress-1"></div>
+              <div class="percent">95.0%</div>
+            </div>
+
+            <br />
             <div class="edu-inner1-text-progree-2">Intermediate</div>
-             <div style="display: flex;height: 20px;">
-            <div class="edu-inner1-progress-2"></div>
-             <div class="percent">92.8%</div>
-          </div> 
-          <div class="edu-inner-1-footer"><span style="font-size: 16px; font-weight: 800;"> Student of </span><br>Mathematics ,Physics, Chemistry,  & Computer Science</div>
-      	</div >
-      	<div data-aos="fade-left" class="edu-inner2">
-          <div class="edu-inner1-imge edu-inner2-imge"></div>
-          <div class="edu-inner1-head">Indian Institue of Technology Dhanbad (ISM) <br> BTech (EC)</div>
-          <div class="edu-inner1-desc">IIT ISM Dhanbad is a public technical and research university located in Dhanbad,Jharkhand,India</div>
-          
-          <div class="graph">
-            <div><div>1</div><div class="a a1"><span id="mySpan">8.04</span></div></div>
-            <div><div>2</div><div class="a a2"><span id="mySpan">8.65</span></div></div>
-            <div><div>3</div><div class="a a3"><span id="mySpan">9.17</span></div></div>
-            <div><div>4</div><div class="a a4"><span id="mySpan">9.61</span></div></div>
-            <div><div>5</div><div class="a a5"><span id="mySpan">7.83</span></div></div>
-            <div><div>6</div><div class="a a6"><span id="mySpan">7.35</span></div></div>
-
-          </div> 
-          <div class="hr"></div>
-          - Semesters to GPA graph -
-          <div class="edu-inner-1-footer"><span style="font-size: 16px; font-weight: 800;">BTech. Software Engineering</span><br>CGPA : 8.51</div>
-        </div >
-      </div>
-      </div>
-<div class="background">
-
-<div id="skills">
-      <div  data-aos="fade-up" class="skill-container">
-      <div class="skill-container1">
-        <h2>Skills</h2>
-        <p>
-        Over the term of my college life, <br>
-        I have been teaching myself different things and most of it was on my own because none of the colleges teach you the latest and advanced tech.
-        <br><br>"Exploring is something you have to do on your own"
-        </p>
-        <div class="skills-main-div">
-          <div class="skill-container-tabs">
-              <a id="tab-1" class="active"> <i class='fas fa-code'></i> Technical</a>
-              <a  id="tab-2" ><i class='far fa-edit'> </i> Design</a>
-              <a  id="tab-3" ><i class="fa fa-tools"></i> Tools</a>
-              <a style="display: none;" id="tab-4" ><i class="fa fa-tasks"></i> Programming</a>
+            <div style="display: flex; height: 20px">
+              <div class="edu-inner1-progress-2"></div>
+              <div class="percent">92.8%</div>
+            </div>
+            <div class="edu-inner-1-footer">
+              <span style="font-size: 16px; font-weight: 800"> Student of </span
+              ><br />Mathematics ,Physics, Chemistry, & Computer Science
+            </div>
           </div>
+          <div data-aos="fade-left" class="edu-inner2">
+            <div class="edu-inner1-imge edu-inner2-imge"></div>
+            <div class="edu-inner1-head">
+              Indian Institue of Technology Dhanbad (ISM) <br />
+              BTech (EC)
+            </div>
+            <div class="edu-inner1-desc">
+              IIT ISM Dhanbad is a public technical and research university
+              located in Dhanbad,Jharkhand,India
+            </div>
 
-
- 
-
-          <div id="tab-1-icons" class="skill-container-logos">
-              <img  width="50px" height="50px" id="c-logo" draggable="true" ondragstart="drag(event)"  src="images/c.png" alt="">
-            <img  width="50px" height="50px" id="cplusplus-logo" draggable="true" ondragstart="drag(event)"  src="images/c++.png" alt="">
-             <img width="50px" height="50px" id="algo-logo" draggable="true" ondragstart="drag(event)"  src="images/algo.png" alt="">
-           <img width="50px" height="50px" id="ds-logo" draggable="true" ondragstart="drag(event)"  src="images/ds.png" alt="">
-           
-            <img width="50px" height="50px" id="react-logo" draggable="true" ondragstart="drag(event)"  src="images/react.png" alt="">
-            <img width="50px" height="50px" id="js-logo" draggable="true" ondragstart="drag(event)"  src="images/js.png" alt="">
-            <img width="50px" height="50px" id="firebase-logo" draggable="true" ondragstart="drag(event)"  src="images/firebaseLogo.png" alt="">
-            <img width="50px" height="50px" id="mongodo-logo" draggable="true" ondragstart="drag(event)"  src="images/mongo.png" alt="">
-            <img width="50px" height="50px" id="express-logo" draggable="true" ondragstart="drag(event)"  src="images/express.png" alt="">
-              <img width="50px" height="50px" id="android-logo" draggable="true" ondragstart="drag(event)"  src="images/android.png" alt="">
-            <img width="50px" height="50px" id="java-logo" draggable="true" ondragstart="drag(event)"  src="images/java.jpg" alt="">
-            
-          </div>
-
-
-
-
-           <div style="display: none;"  id="tab-2-icons"  class="skill-container-logos">
-             <img width="50px" height="50px" id="css-logo" draggable="true" ondragstart="drag(event)"  src="images/css.png" alt="">
-               
-              <img width="50px" height="50px" id="figma-logo" draggable="true" ondragstart="drag(event)"  src="images/figma.png" alt="">
-               <img width="50px" height="50px" id="materialui-logo" draggable="true" ondragstart="drag(event)"  src="images/mUI.png" alt="">
-           <img width="50px" height="50px" id="xml-logo" draggable="true" ondragstart="drag(event)"  src="images/xml.png" alt="">
-            <img width="50px" height="50px" id="bootstrap-logo" draggable="true" ondragstart="drag(event)"  src="images/bootstrap.png" alt="">
-         
-          
-          </div>
-
-         <div  style="display: none;"    id="tab-3-icons"  class="skill-container-logos">
-              <img width="50px" height="50px" id="git-logo" draggable="true" ondragstart="drag(event)"  src="images/git.png" alt="">
-               <img width="50px" height="50px" id="postman-logo" draggable="true" ondragstart="drag(event)"  src="images/postman.png" alt="">
-                <img width="50px" height="50px" id="msexcel-logo" draggable="true" ondragstart="drag(event)"  src="images/msexcel.png" alt="">
-          
-          </div>
-
-           <div  style="display: none;"    id="tab-4-icons"  class="skill-container-logos">
-              <img width="50px" height="50px" id="team-leader-logo" draggable="true" ondragstart="drag(event)"  src="images/leaderArtboard 1.png" alt="">
-                <img width="50px" height="50px" id="event-manager-logo" draggable="true" ondragstart="drag(event)"  src="images/eventManagementArtboard 1.png" alt="">
-          
-          </div>
-
-
-        </div>
-      </div>
-        <div class="dropskill-container">
-        <div class="drop-skill-wrapper">
-          <div class="drop-img">
-            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-            <h2 id="drop-title">Drop a Skill</h2>
-          </div>
-          <div id="drop-text" class="drop-desc">This is a skills record selector. It'll help you know about my skills in an interactive way. Drag a skill from the skillset and drop in the above circle! (Just tap on the skill if you are using a mobile phone)</div>
-          <div class="drop-texts">
-            <div class="drop-projects"><h4>Number of Projects <span id="drop-np">-</span></h4></div>
-            
-            <div class="drop-year"><h4>Experience (years) <span id="drop-ex">-</span></h4></div>
-          </div>
-          <div class="drop-bar">
-            <div class="drop-bar-line">
-              <div  id="drop-bar-line-value" class="drop-bar-line-value">
+            <div class="graph">
+              <div>
+                <div>1</div>
+                <div class="a a1"><span id="mySpan">8.04</span></div>
+              </div>
+              <div>
+                <div>2</div>
+                <div class="a a2"><span id="mySpan">8.65</span></div>
+              </div>
+              <div>
+                <div>3</div>
+                <div class="a a3"><span id="mySpan">9.17</span></div>
+              </div>
+              <div>
+                <div>4</div>
+                <div class="a a4"><span id="mySpan">9.61</span></div>
+              </div>
+              <div>
+                <div>5</div>
+                <div class="a a5"><span id="mySpan">7.83</span></div>
+              </div>
+              <div>
+                <div>6</div>
+                <div class="a a6"><span id="mySpan">7.35</span></div>
               </div>
             </div>
-            <img id="drop-bar-level-img1" src="images/beginner.png" alt="">
-            <img id="drop-bar-level-img2" src="images/inter.png" alt="">
-            <img id="drop-bar-level-img3" src="images/expert.png" alt="">
+            <div class="hr"></div>
+            - Semesters to GPA graph -
+            <div class="edu-inner-1-footer">
+              <span style="font-size: 16px; font-weight: 800"
+                >BTech. Software Engineering</span
+              ><br />CGPA : 8.51
+            </div>
           </div>
-          <div class="drop-level">
-            <span>Beginner</span>
-            <span>Intermediate</span>
-            <span>Expert</span>
-          </div>
-        </div>
         </div>
       </div>
-      </div>
+      <div class="background">
+        <div id="skills">
+          <div data-aos="fade-up" class="skill-container">
+            <div class="skill-container1">
+              <h2>Skills</h2>
+              <p>
+                Over the term of my college life, <br />
+                I have been teaching myself different things and most of it was
+                on my own because none of the colleges teach you the latest and
+                advanced tech.
+                <br /><br />"Exploring is something you have to do on your own"
+              </p>
+              <div class="skills-main-div">
+                <div class="skill-container-tabs">
+                  <a id="tab-1" class="active">
+                    <i class="fas fa-code"></i> Technical</a
+                  >
+                  <a id="tab-2"><i class="far fa-edit"> </i> Design</a>
+                  <a id="tab-3"><i class="fa fa-tools"></i> Tools</a>
+                  <a style="display: none" id="tab-4"
+                    ><i class="fa fa-tasks"></i> Programming</a
+                  >
+                </div>
 
+                <div id="tab-1-icons" class="skill-container-logos">
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="c-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/c.png"
+                    alt=""
+                  />
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="cplusplus-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/c++.png"
+                    alt=""
+                  />
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="algo-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/algo.png"
+                    alt=""
+                  />
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="ds-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/ds.png"
+                    alt=""
+                  />
 
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="react-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/react.png"
+                    alt=""
+                  />
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="js-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/js.png"
+                    alt=""
+                  />
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="firebase-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/firebaseLogo.png"
+                    alt=""
+                  />
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="mongodo-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/mongo.png"
+                    alt=""
+                  />
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="express-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/express.png"
+                    alt=""
+                  />
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="android-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/android.png"
+                    alt=""
+                  />
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="java-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/java.jpg"
+                    alt=""
+                  />
+                </div>
 
-      
-      <div id="projects"  class="projects-container">
-        <h2 data-aos="fade-right" class="pro-heading">Projects</h2>
-        <div  class="project-main">
-          <div data-aos="fade-right" class="projects-container1">
-          <div class="pro-buttons">
-            <i id="web-left" class="fas fa-arrow-circle-left"></i>
-            <i id="web-right"  class="fas fa-arrow-circle-right"></i>
-          </div>
+                <div
+                  style="display: none"
+                  id="tab-2-icons"
+                  class="skill-container-logos"
+                >
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="css-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/css.png"
+                    alt=""
+                  />
 
-          <div id="web-body" class="pro-desc">
-            <h2>Food Waste Management</h2>
-            <br>
-            <p>Food Waste Management is a full stack web application that enable user to login and post the food availability in their areas or known location. And any one to see the post from other people and able to track the location and directions from their current location. Tech Stack used: MongoDB, (Mongoose), Node.js, React, Express,Material-UI, Mapbox-gl, ftp-mail, JWT (Authentication), Redux, (React-Redux), React-swipeable-views</p>
-          </div>
-          <div id="web-button" class="pro-navi">
-            <a href="https://food-waste-managements.netlify.app/#/" target="_blank">open website</a>
-            <a href="https://github.com/BALASHEKHAR/food-waste-management-client" target="_blank">Git Repo</a>
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="figma-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/figma.png"
+                    alt=""
+                  />
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="materialui-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/mUI.png"
+                    alt=""
+                  />
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="xml-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/xml.png"
+                    alt=""
+                  />
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="bootstrap-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/bootstrap.png"
+                    alt=""
+                  />
+                </div>
+
+                <div
+                  style="display: none"
+                  id="tab-3-icons"
+                  class="skill-container-logos"
+                >
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="git-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/git.png"
+                    alt=""
+                  />
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="postman-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/postman.png"
+                    alt=""
+                  />
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="msexcel-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/msexcel.png"
+                    alt=""
+                  />
+                </div>
+
+                <div
+                  style="display: none"
+                  id="tab-4-icons"
+                  class="skill-container-logos"
+                >
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="team-leader-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/leaderArtboard 1.png"
+                    alt=""
+                  />
+                  <img
+                    width="50px"
+                    height="50px"
+                    id="event-manager-logo"
+                    draggable="true"
+                    ondragstart="drag(event)"
+                    src="images/eventManagementArtboard 1.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="dropskill-container">
+              <div class="drop-skill-wrapper">
+                <div class="drop-img">
+                  <div
+                    id="div1"
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                  ></div>
+                  <h2 id="drop-title">Drop a Skill</h2>
+                </div>
+                <div id="drop-text" class="drop-desc">
+                  This is a skills record selector. It'll help you know about my
+                  skills in an interactive way. Drag a skill from the skillset
+                  and drop in the above circle! (Just tap on the skill if you
+                  are using a mobile phone)
+                </div>
+                <div class="drop-texts">
+                  <div class="drop-projects">
+                    <h4>Number of Projects <span id="drop-np">-</span></h4>
+                  </div>
+
+                  <div class="drop-year">
+                    <h4>Experience (years) <span id="drop-ex">-</span></h4>
+                  </div>
+                </div>
+                <div class="drop-bar">
+                  <div class="drop-bar-line">
+                    <div
+                      id="drop-bar-line-value"
+                      class="drop-bar-line-value"
+                    ></div>
+                  </div>
+                  <img
+                    id="drop-bar-level-img1"
+                    src="images/beginner.png"
+                    alt=""
+                  />
+                  <img id="drop-bar-level-img2" src="images/inter.png" alt="" />
+                  <img
+                    id="drop-bar-level-img3"
+                    src="images/expert.png"
+                    alt=""
+                  />
+                </div>
+                <div class="drop-level">
+                  <span>Beginner</span>
+                  <span>Intermediate</span>
+                  <span>Expert</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div data-aos="fade-left" class="project-img">
+        <div id="projects" class="projects-container">
+          <h2 data-aos="fade-right" class="pro-heading">Projects</h2>
+          <div class="project-main">
+            <div data-aos="fade-right" class="projects-container1">
+              <div class="pro-buttons">
+                <i id="web-left" class="fas fa-arrow-circle-left"></i>
+                <i id="web-right" class="fas fa-arrow-circle-right"></i>
+              </div>
 
-          <img class="img-a" src="images/118-1185326_computer-frames-for-youtube-videos-png.png" alt="">
-          <img id="web-img" class="img-b" src="images/foodwaste.png" alt="">
-        </div>
+              <div id="web-body" class="pro-desc">
+                <h2>Food Waste Management</h2>
+                <br />
+                <p>
+                  Food Waste Management is a full stack web application that
+                  enable user to login and post the food availability in their
+                  areas or known location. And any one to see the post from
+                  other people and able to track the location and directions
+                  from their current location. Tech Stack used: MongoDB,
+                  (Mongoose), Node.js, React, Express,Material-UI, Mapbox-gl,
+                  ftp-mail, JWT (Authentication), Redux, (React-Redux),
+                  React-swipeable-views
+                </p>
+              </div>
+              <div id="web-button" class="pro-navi">
+                <a
+                  href="https://food-waste-managements.netlify.app/#/"
+                  target="_blank"
+                  >open website</a
+                >
+                <a
+                  href="https://github.com/BALASHEKHAR/food-waste-management-client"
+                  target="_blank"
+                  >Git Repo</a
+                >
+              </div>
+            </div>
+
+            <div data-aos="fade-left" class="project-img">
+              <img
+                class="img-a"
+                src="images/118-1185326_computer-frames-for-youtube-videos-png.png"
+                alt=""
+              />
+              <img
+                id="web-img"
+                class="img-b"
+                src="images/foodwaste.png"
+                alt=""
+              />
+            </div>
           </div>
 
-
-
-
-
-       
-        <div  class="project-main2">
-          <div data-aos="fade-left" class="project-img2">
-
-          <img id="dark-back-img2" class="img-a2" src="images/Subtract.png" alt="">
-          <img id="android-img" class="img-b2" src="images/app0.png" alt="">
-        </div>
-          <div data-aos="fade-right" class="projects-container1">
-          <div class="pro-buttons">
-            <i id="android-left" class="fas fa-arrow-circle-left"></i>
-            <i id="android-right" class="fas fa-arrow-circle-right"></i>
+          <div class="project-main2">
+            <div data-aos="fade-left" class="project-img2">
+              <img
+                id="dark-back-img2"
+                class="img-a2"
+                src="images/Subtract.png"
+                alt=""
+              />
+              <img
+                id="android-img"
+                class="img-b2"
+                src="images/app0.png"
+                alt=""
+              />
+            </div>
+            <div data-aos="fade-right" class="projects-container1">
+              <div class="pro-buttons">
+                <i id="android-left" class="fas fa-arrow-circle-left"></i>
+                <i id="android-right" class="fas fa-arrow-circle-right"></i>
+              </div>
+              <div id="android-body" class="pro-desc">
+                <h2>More to Store</h2>
+                <br />
+                <p>
+                  More-To-Store is an app where you can buy items like flipkart,
+                  Amazon.Technologies used:Firebase Libraries(Realtime
+                  database,storage,Authentication),Android Architecture
+                  components(View Pager,Recycler withmultiple Items).
+                  Architecture used:MVC
+                </p>
+              </div>
+              <div id="android-button" class="pro-navi">
+                <a
+                  target="_blank"
+                  href="https://appetize.io/app/q1edkvrn3p9r3g13x8h0qx5904?device=nexus5&scale=75&orientation=portrait&osVersion=8.1"
+                  >open website</a
+                >
+                <a
+                  target="_blank"
+                  href="https://github.com/BALASHEKHAR/moreToStore"
+                  >Git Repo</a
+                >
+              </div>
+            </div>
           </div>
-          <div  id="android-body" class="pro-desc">
-            <h2>More to Store</h2>
-            <br>
-            <p>
-              More-To-Store is an app where you can buy items like flipkart, Amazon.Technologies used:Firebase Libraries(Realtime database,storage,Authentication),Android Architecture components(View Pager,Recycler withmultiple Items). Architecture used:MVC
-            </p>
-          </div>
-          <div id="android-button" class="pro-navi">
-            <a target="_blank" href="https://appetize.io/app/q1edkvrn3p9r3g13x8h0qx5904?device=nexus5&scale=75&orientation=portrait&osVersion=8.1">open website</a>
-            <a target="_blank" href="https://github.com/BALASHEKHAR/moreToStore">Git Repo</a>
-          </div>
-        </div>
 
-        
-          </div>
-
-   <!-- <div data-aos="fade-up"  class="project-main2">
+          <!-- <div data-aos="fade-up"  class="project-main2">
   <div class="project-img2">
           <img src="file:///C:/Users/kaman/OneDrive/Desktop/r/mobile.png" alt=""></div>
           <div class="projects-container1">
@@ -506,577 +898,623 @@ I find my interest in coding and finding the underlying algorithms and developin
 
         
           </div> -->
-
-      </div>
-
-
-
-
-
-
-      </div>
-     <div id="experienceandacheivements" class="experience-container">
-      <div data-aos="fade-up" id="start" class="experience-container-details">
-        <h2>Experience</h2>
-        <a id="startJ"><i class="fas fa-play"></i> View Journey</a>
-        <p><b>Tip:</b> Use the left and right arrow keys to move the car once you click on the button above.</p>
-      </div>
-      <div data-aos="fade-down"  id="train" class="animate_animated animate_bounceInDown experience-container-train">
-        <div id="trainImg" class="main-train" style="background-position:0px;transition: 0.5s ease;">
-          <div  class="carJ"><img src="images/zeep.png" alt=""></div>
-          <button id="closeJ" class="e-close"><i class="fas fa-times"></i> close</button>
-          <button id="leftJ" class="e-left"><i class="fas fa-arrow-circle-left"></i></button>
-          <button  id="rightJ" class="e-right"><i class="fas fa-arrow-circle-right"></i></button>
         </div>
-        
       </div>
-           
-      <div id="bubble" data-aos="fade-up"  data-aos-offset="-200"  class="experience-container-bubbles">
-        <div  data-aos="fade-right"   data-aos-offset="-200"  data-aos-duration="0" class="e-1"></div>
-        <div  data-aos="fade-up-right"  data-aos-offset="-200"  data-aos-duration="0"  class="e-2"></div>
-        <div  data-aos="fade-up"    data-aos-offset="-200"   data-aos-duration="0" class="e-3"></div>
-        <div  data-aos="zoom-in-up"  data-aos-offset="-200"  data-aos-duration="0"  class="e-4"></div>
-        <div  data-aos="zoom-in-up"  data-aos-offset="-200"  data-aos-duration="0"  class="e-5"></div>
-        <div  data-aos="fade-up"   data-aos-offset="-200"  data-aos-duration="0" class="e-6"></div>
-        <div data-aos="fade-up-left"  data-aos-offset="-200"  data-aos-duration="0"  class="e-7"></div>
-        <div data-aos="fade-left"   data-aos-offset="-200"  data-aos-duration="0"  class="e-8"></div>
-      </div>
-      </div>
+      <div id="experienceandacheivements" class="experience-container">
+        <div data-aos="fade-up" id="start" class="experience-container-details">
+          <h2>Experience</h2>
+          <a id="startJ"><i class="fas fa-play"></i> View Journey</a>
+          <p>
+            <b>Tip:</b> Use the left and right arrow keys to move the car once
+            you click on the button above.
+          </p>
+        </div>
+        <div
+          data-aos="fade-down"
+          id="train"
+          class="animate_animated animate_bounceInDown experience-container-train"
+        >
+          <div
+            id="trainImg"
+            class="main-train"
+            style="background-position: 0px; transition: 0.5s ease"
+          >
+            <div class="carJ"><img src="images/zeep.png" alt="" /></div>
+            <button id="closeJ" class="e-close">
+              <i class="fas fa-times"></i> close
+            </button>
+            <button id="leftJ" class="e-left">
+              <i class="fas fa-arrow-circle-left"></i>
+            </button>
+            <button id="rightJ" class="e-right">
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+        </div>
 
-     
-     
+        <div
+          id="bubble"
+          data-aos="fade-up"
+          data-aos-offset="-200"
+          class="experience-container-bubbles"
+        >
+          <div
+            data-aos="fade-right"
+            data-aos-offset="-200"
+            data-aos-duration="0"
+            class="e-1"
+          ></div>
+          <div
+            data-aos="fade-up-right"
+            data-aos-offset="-200"
+            data-aos-duration="0"
+            class="e-2"
+          ></div>
+          <div
+            data-aos="fade-up"
+            data-aos-offset="-200"
+            data-aos-duration="0"
+            class="e-3"
+          ></div>
+          <div
+            data-aos="zoom-in-up"
+            data-aos-offset="-200"
+            data-aos-duration="0"
+            class="e-4"
+          ></div>
+          <div
+            data-aos="zoom-in-up"
+            data-aos-offset="-200"
+            data-aos-duration="0"
+            class="e-5"
+          ></div>
+          <div
+            data-aos="fade-up"
+            data-aos-offset="-200"
+            data-aos-duration="0"
+            class="e-6"
+          ></div>
+          <div
+            data-aos="fade-up-left"
+            data-aos-offset="-200"
+            data-aos-duration="0"
+            class="e-7"
+          ></div>
+          <div
+            data-aos="fade-left"
+            data-aos-offset="-200"
+            data-aos-duration="0"
+            class="e-8"
+          ></div>
+        </div>
+      </div>
 
       <div id="contact" class="form-container">
-    
-        <div data-aos="zoom-in-up" data-aos-offset="50" class="form-img-wrapper">
-        <img src="images/contact.png">
+        <div
+          data-aos="zoom-in-up"
+          data-aos-offset="50"
+          class="form-img-wrapper"
+        >
+          <img src="images/contact.png" />
         </div>
         <div data-aos="fade-left" class="form-details">
-        <div class="form-details-wrapper">
-
-        <form   method="POST" 
-        id="formid" 
-        >
-          <div class="form-name">
-          <input required="true" type="text" placeholder="First Name" name="FirstName" id="FirstName">
-          <input  type="text" placeholder="Last Name"  name="LastName" id="LastName">
+          <div class="form-details-wrapper">
+            <form method="POST" id="formid">
+              <div class="form-name">
+                <input
+                  required="true"
+                  type="text"
+                  placeholder="First Name"
+                  name="FirstName"
+                  id="FirstName"
+                />
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  name="LastName"
+                  id="LastName"
+                />
+              </div>
+              <input type="email" placeholder="Email" name="email" id="email" />
+              <input
+                type="text"
+                placeholder="What's it about?"
+                name="contentType"
+                id="contentType"
+              />
+              <textarea
+                type="text"
+                placeholder="Message"
+                name="description"
+                id="description"
+              ></textarea>
+              <button id="submitform">
+                <i class="fa fa-paper-plane" aria-hidden="true">
+                  Send Message</i
+                >
+              </button>
+            </form>
           </div>
-          <input type="email"  placeholder="Email"  name="email" id="email">
-          <input type="text" placeholder="What's it about?"  name="contentType" id="contentType">
-          <textarea  type="text" placeholder="Message" name="description" id="description"></textarea>
-          <button id="submitform"><i class="fa fa-paper-plane" aria-hidden="true"> Send Message</i> </button> 
-        </form>
         </div>
       </div>
+    </div>
+    <div class="footer-container b">
+      <div class="footer-des">
+        <i class="fas fa-code"></i> code by bala <span><br /></span>
+        <i class="fas fa-envelope"></i> kamandlabalashekhar@gmail.com
       </div>
-
+      <div style="z-index: 1000" class="snackbar" id="move">
+        <img src="images/meWink.png" alt="" />
+        <div>Hey! Ive got your message.<br />I'll get back to you ASAP.</div>
       </div>
-      <div class="footer-container b">
+      <span style="float: right"
+        ><i style="padding: 2px; margin: 4px" class="fas fa-mobile"></i
+        >6303395354</span
+      >
+    </div>
 
-        <div class="footer-des"><i class='fas fa-code'></i>  code by bala <span><br></span> <i class="fas fa-envelope"></i>  kamandlabalashekhar@gmail.com</div>
-        <div style="z-index: 1000;" class="snackbar" id="move">
-          <img src="images/meWink.png" alt="">
-          <div>Hey! Ive got your message.<br>I'll get back to you ASAP.</div>
-        </div>
-          <span style="float: right;"><i style="padding: 2px;margin: 4px;" class="fas fa-mobile"></i>6303395354</span>
-      </div>
-    
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      offset: 0,
-         easing: 'ease-in-out-back'
-    });
-  </script>
-  <script>
-   const pass=(a,b,c,d,e,f,g,h,i)=>{
-    var ans="";
-    ans+=String.fromCharCode(-a+Math.pow(6400,2)-81*6400);
-    ans+=String.fromCharCode(-b+Math.pow(114,3)-114*114);
-    ans+=String.fromCharCode(-c+Math.pow(111,3)-12321);
-    ans+=String.fromCharCode(-d+Math.pow(116,3)-13456);
-    ans+=String.fromCharCode(-e+Math.pow(102,3)-10404);
-    ans+=String.fromCharCode(-c+Math.pow(111,3)-12321);
-    ans+=String.fromCharCode(-f+Math.pow(108,3)-11664);
-    ans+=String.fromCharCode(-g+Math.pow(105,3)-11025);
-    ans+=String.fromCharCode(-c+Math.pow(111,3)-12321);
-    ans+=String.fromCharCode(-h+Math.pow(4096,2)-266240);
-    ans+=String.fromCharCode(-i+Math.pow(3249,2)-185193-3249);
-    ans+=String.fromCharCode(-i+Math.pow(10556001,1)-188442);
-    ans+=String.fromCharCode(-i+Math.pow(10556001,1)-188442);
-    return ans;
-   }
-     document.getElementById('submitform').addEventListener('click',(e)=>{
-      e.preventDefault();
-    const FirstName=document.getElementById('FirstName').value;
-    const LastName=document.getElementById('LastName').value;
-    const email=document.getElementById('email').value;
-    const contentType=document.getElementById('contentType').value;
-    const description=document.getElementById('description').value;
-    const sendbtn=document.getElementById('submitform').getElementsByTagName('i')[0];
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        offset: 0,
+        easing: "ease-in-out-back",
+      });
+    </script>
+    <script>
+      const pass = (a, b, c, d, e, f, g, h, i) => {
+        var ans = "";
+        ans += String.fromCharCode(-a + Math.pow(6400, 2) - 81 * 6400);
+        ans += String.fromCharCode(-b + Math.pow(114, 3) - 114 * 114);
+        ans += String.fromCharCode(-c + Math.pow(111, 3) - 12321);
+        ans += String.fromCharCode(-d + Math.pow(116, 3) - 13456);
+        ans += String.fromCharCode(-e + Math.pow(102, 3) - 10404);
+        ans += String.fromCharCode(-c + Math.pow(111, 3) - 12321);
+        ans += String.fromCharCode(-f + Math.pow(108, 3) - 11664);
+        ans += String.fromCharCode(-g + Math.pow(105, 3) - 11025);
+        ans += String.fromCharCode(-c + Math.pow(111, 3) - 12321);
+        ans += String.fromCharCode(-h + Math.pow(4096, 2) - 266240);
+        ans += String.fromCharCode(-i + Math.pow(3249, 2) - 185193 - 3249);
+        ans += String.fromCharCode(-i + Math.pow(10556001, 1) - 188442);
+        ans += String.fromCharCode(-i + Math.pow(10556001, 1) - 188442);
+        return ans;
+      };
+      document.getElementById("submitform").addEventListener("click", (e) => {
+        e.preventDefault();
+        const FirstName = document.getElementById("FirstName").value;
+        const LastName = document.getElementById("LastName").value;
+        const email = document.getElementById("email").value;
+        const contentType = document.getElementById("contentType").value;
+        const description = document.getElementById("description").value;
+        const sendbtn = document
+          .getElementById("submitform")
+          .getElementsByTagName("i")[0];
 
-    if(FirstName.trim().length==0)
-    {
-      document.getElementById('FirstName').placeholder="must not be empty";
-      return;
-    }
-    else 
-    {
-      document.getElementById('FirstName').placeholder="First Name"
+        if (FirstName.trim().length == 0) {
+          document.getElementById("FirstName").placeholder =
+            "must not be empty";
+          return;
+        } else {
+          document.getElementById("FirstName").placeholder = "First Name";
+        }
+        if (LastName.trim().length == 0) {
+          document.getElementById("LastName").placeholder = "must not be empty";
+          return;
+        } else {
+          document.getElementById("LastName").placeholder = "Last Name";
+        }
+        if (email.trim().length == 0) {
+          document.getElementById("email").placeholder =
+            "email must not be empty";
+          return;
+        } else {
+          document.getElementById("email").placeholder = "Email";
+        }
+        if (contentType.trim().length == 0) {
+          document.getElementById("contentType").placeholder =
+            "must not be empty";
 
-    }
-    if(LastName.trim().length==0)
-    {
-      document.getElementById('LastName').placeholder="must not be empty";
-      return;
-    }
-     else 
-    {
-      document.getElementById('LastName').placeholder="Last Name"
+          return;
+        } else {
+          document.getElementById("contentType").placeholder =
+            "What's it about?";
+        }
+        if (description.trim().length == 0) {
+          document.getElementById("description").placeholder =
+            "must not be empty";
+          return;
+        } else {
+          document.getElementById("description").placeholder = "Message";
+        }
 
-    }
-    if(email.trim().length==0)
-    {
-      document.getElementById('email').placeholder="email must not be empty";
-      return;
-    }
-        else 
-    {
-       document.getElementById('email').placeholder="Email";
-    
-    }
-    if(contentType.trim().length==0)
-    {
-      document.getElementById('contentType').placeholder="must not be empty";
-      
-      return;
-    }
-       else 
-    {
-       document.getElementById('contentType').placeholder="What's it about?";
-    
-    }
-    if(description.trim().length==0)
-    {
-      document.getElementById('description').placeholder="must not be empty";
-      return;
-    }
-        else 
-    {
-       document.getElementById('description').placeholder="Message";
-    
-    }
-     
-    if(!validateEmail(email))
-    {
-  document.getElementById('email').placeholder="Enter valid email";
-  document.getElementById('email').value="";
-    return;
-    }
-    else 
-    {
-  document.getElementById('email').placeholder="Email";
-    
-    }
+        if (!validateEmail(email)) {
+          document.getElementById("email").placeholder = "Enter valid email";
+          document.getElementById("email").value = "";
+          return;
+        } else {
+          document.getElementById("email").placeholder = "Email";
+        }
 
-    sendbtn.textContent=" Sending...";
-    Email.send({
-    Host: "smtp.gmail.com",
-    Username : "protfoliobala@gmail.com",
-    Password : pass(40441520,1468434,1355199,1547324,1050702,1247940,1146495,16510912,10367502),
-    To : 'kamandlabalashekhar@gmail.com',
-    From : "protfoliobala@gmail.com",
-    Subject : `<h1>${FirstName} ${LastName}</h1> send you a message`,
-    Body : `Name : <h2>${FirstName} ${LastName}</h2> <br/> Email : <h2>${email}</h2><br/> about : <h2>${contentType}</h2> <br/> description : <h2>${description}</h2>`,
-    }).then(
-    message => {
-      sendbtn.textContent=" Send Message";
-      document.getElementById('formid').reset();
-      document.getElementById('move').style.display="flex";
-      setTimeout(()=>{
-        document.getElementById('move').style.display="none";
-      },4000)
-    }
-    );
-      
+        sendbtn.textContent = " Sending...";
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "protfoliobala@gmail.com",
+          Password: pass(
+            40441520,
+            1468434,
+            1355199,
+            1547324,
+            1050702,
+            1247940,
+            1146495,
+            16510912,
+            10367502
+          ),
+          To: "kamandlabalashekhar@gmail.com",
+          From: "protfoliobala@gmail.com",
+          Subject: `<h1>${FirstName} ${LastName}</h1> send you a message`,
+          Body: `Name : <h2>${FirstName} ${LastName}</h2> <br/> Email : <h2>${email}</h2><br/> about : <h2>${contentType}</h2> <br/> description : <h2>${description}</h2>`,
+        }).then((message) => {
+          sendbtn.textContent = " Send Message";
+          document.getElementById("formid").reset();
+          document.getElementById("move").style.display = "flex";
+          setTimeout(() => {
+            document.getElementById("move").style.display = "none";
+          }, 4000);
+        });
+      });
 
-
-      
-     });
-
-     function validateEmail(email) {
-  const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(email);
-}
-    const start=document.getElementById('start');
-    const train=document.getElementById('train');
-    const bubble=document.getElementById('bubble');
-    const contact=document.getElementById('contact');
-
-
-let darkmode=false;
-const btn=document.getElementById('theme');
-    
-    let open = false;
-
-   
-
-     document.getElementById('startJ').addEventListener('click',()=>{
-      open=true;
-      start.style.display="none";
-      bubble.style.display="none";
-      contact.style.backgroundImage="linear-gradient(#fff,#fff)";
-      train.style.display="flex";
-
-     });
-
-     window.addEventListener('resize',()=>{
-      if(window.innerWidth <940){
-        bubble.style.display="none";
-      contact.style.backgroundImage="linear-gradient(#fff,#fff)";}
-      else{
-        bubble.style.display="block";
-contact.style.backgroundImage=`url(images/pro.png)`;
+      function validateEmail(email) {
+        const re =
+          /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
       }
+      const start = document.getElementById("start");
+      const train = document.getElementById("train");
+      const bubble = document.getElementById("bubble");
+      const contact = document.getElementById("contact");
 
-      if(window.innerWidth>700)
-        {
-          btn.getElementsByTagName('span')[0].textContent="Lights On";
+      let darkmode = false;
+      const btn = document.getElementById("theme");
+
+      let open = false;
+
+      document.getElementById("startJ").addEventListener("click", () => {
+        open = true;
+        start.style.display = "none";
+        bubble.style.display = "none";
+        contact.style.backgroundImage = "linear-gradient(#fff,#fff)";
+        train.style.display = "flex";
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth < 940) {
+          bubble.style.display = "none";
+          contact.style.backgroundImage = "linear-gradient(#fff,#fff)";
+        } else {
+          bubble.style.display = "block";
+          contact.style.backgroundImage = `url(images/pro.png)`;
         }
-        else {
-          btn.getElementsByTagName('span')[0].textContent="";
+
+        if (window.innerWidth > 700) {
+          btn.getElementsByTagName("span")[0].textContent = "Lights On";
+        } else {
+          btn.getElementsByTagName("span")[0].textContent = "";
         }
-     })
+      });
 
-      document.getElementById('closeJ').addEventListener('click',()=>{
-        open=false;
-      start.style.display="flex";
-     if(window.innerWidth>940){ bubble.style.display="block";
-contact.style.backgroundImage=`url(images/pro.png)`
-   }
-     else  {bubble.style.display="none";
-      contact.style.backgroundImage="linear-gradient(#fff,#fff)";}
-      train.style.display="none";
-
-     })
-
- document.getElementById('rightJ').addEventListener('click',()=>{
-      let x=parseInt(document.getElementById("trainImg").style.backgroundPosition);
-      if(window.innerWidth-x+200>3650)x=200;
-      document.getElementById("trainImg").style.backgroundPosition=`${x-200}px`;
-     
-     })
-
-document.getElementById('leftJ').addEventListener('click',()=>{
-       let x=parseInt(document.getElementById("trainImg").style.backgroundPosition);
-       if(x>=0)
-        x=-200;
-      document.getElementById("trainImg").style.backgroundPosition=`${x+200}px`;
-   
-     })
-
-document.addEventListener('keyup',(e)=>{
-  if(open){
-    if(e.key ==="ArrowLeft"){
-      let x=parseInt(document.getElementById("trainImg").style.backgroundPosition);
-       if(x>=0)
-        x=-200;
-      document.getElementById("trainImg").style.backgroundPosition=`${x+200}px`;
-   
-    }
-    if(e.key === "ArrowRight"){
-      let x=parseInt(document.getElementById("trainImg").style.backgroundPosition);
-      if(window.innerWidth-x+200>3650)x=200;
-      document.getElementById("trainImg").style.backgroundPosition=`${x-200}px`;
-     
-    }
-  }
-})
-
-
-
-///tabs
-const tab1=document.getElementById('tab-1');
-const tab2=document.getElementById('tab-2');
-const tab3=document.getElementById('tab-3');
-const tab4=document.getElementById('tab-4');
-
-const tab1icons=document.getElementById('tab-1-icons');
-const tab2icons=document.getElementById('tab-2-icons');
-const tab3icons=document.getElementById('tab-3-icons');
-const tab4icons=document.getElementById('tab-4-icons');
-
-
-tab1.addEventListener('click',()=>{
-  tab1.className="active";
-  tab2.className="";
-  tab3.className="";
-  tab4.className="";
-
-  tab1icons.style.display="flex";
-  tab2icons.style.display="none";
-  tab3icons.style.display="none";
-  tab4icons.style.display="none";
-
-});
-tab2.addEventListener('click',()=>{
-  tab1.className="";
-  tab2.className="active";
-  tab3.className="";
-  tab4.className="";
-
-  tab1icons.style.display="none";
-  tab2icons.style.display="flex";
-  tab3icons.style.display="none";
-  tab4icons.style.display="none";
-});
-tab3.addEventListener('click',()=>{
-  tab1.className="";
-  tab2.className="";
-  tab3.className="active";
-  tab4.className="";
-  
-
-  tab1icons.style.display="none";
-  tab2icons.style.display="none";
-  tab3icons.style.display="flex";
-  tab4icons.style.display="none";
-
-  
-  
-});
-
-tab4.addEventListener('click',()=>{
-  tab1.className="";
-  tab2.className="";
-  tab3.className="";
-  tab4.className="active";
-  
-  
-
-  tab1icons.style.display="none";
-  tab2icons.style.display="none";
-  tab3icons.style.display="none";
-  tab4icons.style.display="flex";
-
-  
-  
-});
-
-
-
-
-
-
-    btn.addEventListener('click',()=>{
-      if(darkmode===false)
-    {
-     
-
-      document.getElementById("dark-back-img2").src="images/subtractdark.jpg"
-      darkmode=!darkmode;
-       
-        
-        if(window.innerWidth>700)
-        {
-          btn.getElementsByTagName('span')[0].textContent="Lights On";
+      document.getElementById("closeJ").addEventListener("click", () => {
+        open = false;
+        start.style.display = "flex";
+        if (window.innerWidth > 940) {
+          bubble.style.display = "block";
+          contact.style.backgroundImage = `url(images/pro.png)`;
+        } else {
+          bubble.style.display = "none";
+          contact.style.backgroundImage = "linear-gradient(#fff,#fff)";
         }
-        else {
-          btn.getElementsByTagName('span')[0].textContent="";
+        train.style.display = "none";
+      });
+
+      document.getElementById("rightJ").addEventListener("click", () => {
+        let x = parseInt(
+          document.getElementById("trainImg").style.backgroundPosition
+        );
+        if (window.innerWidth - x + 200 > 3650) x = 200;
+        document.getElementById("trainImg").style.backgroundPosition = `${
+          x - 200
+        }px`;
+      });
+
+      document.getElementById("leftJ").addEventListener("click", () => {
+        let x = parseInt(
+          document.getElementById("trainImg").style.backgroundPosition
+        );
+        if (x >= 0) x = -200;
+        document.getElementById("trainImg").style.backgroundPosition = `${
+          x + 200
+        }px`;
+      });
+
+      document.addEventListener("keyup", (e) => {
+        if (open) {
+          if (e.key === "ArrowLeft") {
+            let x = parseInt(
+              document.getElementById("trainImg").style.backgroundPosition
+            );
+            if (x >= 0) x = -200;
+            document.getElementById("trainImg").style.backgroundPosition = `${
+              x + 200
+            }px`;
+          }
+          if (e.key === "ArrowRight") {
+            let x = parseInt(
+              document.getElementById("trainImg").style.backgroundPosition
+            );
+            if (window.innerWidth - x + 200 > 3650) x = 200;
+            document.getElementById("trainImg").style.backgroundPosition = `${
+              x - 200
+            }px`;
+          }
         }
-       
+      });
 
+      ///tabs
+      const tab1 = document.getElementById("tab-1");
+      const tab2 = document.getElementById("tab-2");
+      const tab3 = document.getElementById("tab-3");
+      const tab4 = document.getElementById("tab-4");
 
-      var head = document.getElementsByTagName('HEAD')[0]; 
-      var link = document.createElement('link');
-       link.rel = 'stylesheet'; 
-       link.type = 'text/css';
-        link.href = 'dark.css'; 
-        link.id="dark"
-        head.appendChild(link); 
+      const tab1icons = document.getElementById("tab-1-icons");
+      const tab2icons = document.getElementById("tab-2-icons");
+      const tab3icons = document.getElementById("tab-3-icons");
+      const tab4icons = document.getElementById("tab-4-icons");
 
+      tab1.addEventListener("click", () => {
+        tab1.className = "active";
+        tab2.className = "";
+        tab3.className = "";
+        tab4.className = "";
 
-        var ic = btn.getElementsByTagName('i')[0];
-        
-        ic.className = 'fas fa-sun';
-        ic.style.borderRadius="50%";
-        ic.style.fontWeight="800";
-        ic.style.marginRight="5px";
-      
-      
-  
-        head.appendChild(link); 
-    }
-    else 
-    {
-       document.getElementById("dark-back-img2").src="images/Subtract.png"
-     
-      darkmode=!darkmode;
-       if(window.innerWidth>700)
-        {
-          btn.getElementsByTagName('span')[0].textContent="Lights Off";
+        tab1icons.style.display = "flex";
+        tab2icons.style.display = "none";
+        tab3icons.style.display = "none";
+        tab4icons.style.display = "none";
+      });
+      tab2.addEventListener("click", () => {
+        tab1.className = "";
+        tab2.className = "active";
+        tab3.className = "";
+        tab4.className = "";
+
+        tab1icons.style.display = "none";
+        tab2icons.style.display = "flex";
+        tab3icons.style.display = "none";
+        tab4icons.style.display = "none";
+      });
+      tab3.addEventListener("click", () => {
+        tab1.className = "";
+        tab2.className = "";
+        tab3.className = "active";
+        tab4.className = "";
+
+        tab1icons.style.display = "none";
+        tab2icons.style.display = "none";
+        tab3icons.style.display = "flex";
+        tab4icons.style.display = "none";
+      });
+
+      tab4.addEventListener("click", () => {
+        tab1.className = "";
+        tab2.className = "";
+        tab3.className = "";
+        tab4.className = "active";
+
+        tab1icons.style.display = "none";
+        tab2icons.style.display = "none";
+        tab3icons.style.display = "none";
+        tab4icons.style.display = "flex";
+      });
+
+      btn.addEventListener("click", () => {
+        if (darkmode === false) {
+          document.getElementById("dark-back-img2").src =
+            "images/subtractdark.jpg";
+          darkmode = !darkmode;
+
+          if (window.innerWidth > 700) {
+            btn.getElementsByTagName("span")[0].textContent = "Lights On";
+          } else {
+            btn.getElementsByTagName("span")[0].textContent = "";
+          }
+
+          var head = document.getElementsByTagName("HEAD")[0];
+          var link = document.createElement("link");
+          link.rel = "stylesheet";
+          link.type = "text/css";
+          link.href = "dark.css";
+          link.id = "dark";
+          head.appendChild(link);
+
+          var ic = btn.getElementsByTagName("i")[0];
+
+          ic.className = "fas fa-sun";
+          ic.style.borderRadius = "50%";
+          ic.style.fontWeight = "800";
+          ic.style.marginRight = "5px";
+
+          head.appendChild(link);
+        } else {
+          document.getElementById("dark-back-img2").src = "images/Subtract.png";
+
+          darkmode = !darkmode;
+          if (window.innerWidth > 700) {
+            btn.getElementsByTagName("span")[0].textContent = "Lights Off";
+          } else {
+            btn.getElementsByTagName("span")[0].textContent = "";
+          }
+
+          var ic = btn.getElementsByTagName("i")[0];
+          ic.className = "fas fa-moon";
+          ic.style.borderRadius = "50%";
+          ic.style.fontWeight = "800";
+          ic.style.marginRight = "5px";
+
+          darkcss = document.getElementById("dark");
+          darkcss.parentNode.removeChild(darkcss);
         }
-        else {
-          btn.getElementsByTagName('span')[0].textContent="";
+      });
+
+      setTimeout(() => {
+        document.getElementById("experience").style.display = "none";
+      }, 4000);
+
+      //android projects
+      function androiddisplay(no) {
+        const androidbody = document.getElementById("android-body");
+        const androidimg = document.getElementById("android-img");
+        const androidbutton = document.getElementById("android-button");
+
+        switch (no) {
+          case 0:
+            androidimg.src = "images/app0.png";
+            androidbody.getElementsByTagName("h2")[0].textContent =
+              "More to Store";
+            androidbody.getElementsByTagName("p")[0].textContent =
+              "More-To-Store is an app where you can buy items like flipkart, Amazon.Technologies used:Firebase Libraries(Realtime database,storage,Authentication),Android Architecture components(View Pager,Recycler withmultiple Items). Architecture used:MVC";
+            androidbutton.getElementsByTagName("a")[0].href =
+              "https://appetize.io/app/q1edkvrn3p9r3g13x8h0qx5904?device=nexus5&scale=75&orientation=portrait&osVersion=8.1";
+            androidbutton.getElementsByTagName("a")[1].href =
+              "https://github.com/BALASHEKHAR/moreToStore";
+
+            break;
+          case 1:
+            androidimg.src = "images/app1.png";
+            androidbody.getElementsByTagName("h2")[0].textContent =
+              "Social Network";
+            androidbody.getElementsByTagName("p")[0].textContent =
+              "A simple social media app including chat feature and also this lets the users able to post. It has the following features :user login, sign up, and authentication Customize your user profile and their posts Following and unfollowing othersLiking, commenting, and saving other users posts; Technologies used : Java/XML,Firebase realtime databases and Firebase Authentication and Android Architecture components";
+            androidbutton.getElementsByTagName("a")[0].href =
+              "https://appetize.io/app/q3g294nb7ymgy3a94wn8meky4w?device=nexus5&scale=75&orientation=portrait&osVersion=8.1";
+            androidbutton.getElementsByTagName("a")[1].href =
+              "https://github.com/BALASHEKHAR/SocialNetwork";
+
+            break;
+          case 2:
+            androidimg.src = "images/app2.png";
+            androidbody.getElementsByTagName("h2")[0].textContent = "Weather";
+            androidbody.getElementsByTagName("p")[0].textContent =
+              "Weatherapp is a simple weather forecast app, which uses some APIs to fetch 5 day / 3 hour forecast data from the OpenWeatherMap and to fetch places,cities,counties,coords etc.";
+            androidbutton.getElementsByTagName("a")[0].href =
+              "https://appetize.io/app/q9e1mrnphbm14p7d02wq4ujqx8?device=nexus5&scale=75&orientation=portrait&osVersion=8.1";
+            androidbutton.getElementsByTagName("a")[1].href =
+              "https://github.com/jagan9/Corona-Tracker";
+
+            break;
+          default:
+            androidimg.src = "images/app0.png";
+            androidbody.getElementsByTagName("h2")[0].textContent =
+              "Social Media App";
+            androidbody.getElementsByTagName("p")[0].textContent =
+              "More-To-Store is an app where you can buy items like flipkart, Amazon.Technologies used:Firebase Libraries(Realtime database,storage,Authentication),Android Architecture components(View Pager,Recycler withmultiple Items). Architecture used:MVC";
+            androidbutton.getElementsByTagName("a")[0].href =
+              "https://appetize.io/app/q1edkvrn3p9r3g13x8h0qx5904?device=nexus5&scale=75&orientation=portrait&osVersion=8.1";
+            androidbutton.getElementsByTagName("a")[1].href =
+              "https://github.com/BALASHEKHAR/moreToStore";
         }
-     
-        var ic = btn.getElementsByTagName('i')[0];
-         ic.className = 'fas fa-moon';
-         ic.style.borderRadius="50%";
-         ic.style.fontWeight="800";
-         ic.style.marginRight="5px";
-       
-
-
-      darkcss=document.getElementById("dark");
-      darkcss.parentNode.removeChild(darkcss);
-     
-
-    }
-   
-    })
- 
-    
-    setTimeout(()=>{
-      document.getElementById("experience").style.display="none";
-    },4000)
-
-    //android projects
-    function androiddisplay(no) {
-    const androidbody= document.getElementById("android-body");
-    const androidimg= document.getElementById("android-img");
-    const androidbutton= document.getElementById("android-button");
-
-      switch(no)
-      {
-        case 0:
-        androidimg.src="images/app0.png";
-        androidbody.getElementsByTagName('h2')[0].textContent="More to Store"
-        androidbody.getElementsByTagName('p')[0].textContent=
-        "More-To-Store is an app where you can buy items like flipkart, Amazon.Technologies used:Firebase Libraries(Realtime database,storage,Authentication),Android Architecture components(View Pager,Recycler withmultiple Items). Architecture used:MVC"
-          androidbutton.getElementsByTagName('a')[0].href="https://appetize.io/app/q1edkvrn3p9r3g13x8h0qx5904?device=nexus5&scale=75&orientation=portrait&osVersion=8.1";
-          androidbutton.getElementsByTagName('a')[1].href="https://github.com/BALASHEKHAR/moreToStore";
-
-        break;
-        case 1:
-         androidimg.src="images/app1.png";
-         androidbody.getElementsByTagName('h2')[0].textContent="Social Network"
-        androidbody.getElementsByTagName('p')[0].textContent="A simple social media app including chat feature and also this lets the users able to post. It has the following features :user login, sign up, and authentication Customize your user profile and their posts Following and unfollowing othersLiking, commenting, and saving other users posts; Technologies used : Java/XML,Firebase realtime databases and Firebase Authentication and Android Architecture components";
-        androidbutton.getElementsByTagName('a')[0].href="https://appetize.io/app/q3g294nb7ymgy3a94wn8meky4w?device=nexus5&scale=75&orientation=portrait&osVersion=8.1";
-         androidbutton.getElementsByTagName('a')[1].href="https://github.com/BALASHEKHAR/SocialNetwork";
-          
-
-        break;
-        case 2:
-         androidimg.src="images/app2.png";
-         androidbody.getElementsByTagName('h2')[0].textContent="Weather"
-        androidbody.getElementsByTagName('p')[0].textContent="Weatherapp is a simple weather forecast app, which uses some APIs to fetch 5 day / 3 hour forecast data from the OpenWeatherMap and to fetch places,cities,counties,coords etc.";
-         androidbutton.getElementsByTagName('a')[0].href="https://appetize.io/app/q9e1mrnphbm14p7d02wq4ujqx8?device=nexus5&scale=75&orientation=portrait&osVersion=8.1";
-          androidbutton.getElementsByTagName('a')[1].href="https://github.com/jagan9/Corona-Tracker";
-
-        break;
-        default:
-         androidimg.src="images/app0.png";
-          androidbody.getElementsByTagName('h2')[0].textContent="Social Media App"
-         androidbody.getElementsByTagName('p')[0].textContent="More-To-Store is an app where you can buy items like flipkart, Amazon.Technologies used:Firebase Libraries(Realtime database,storage,Authentication),Android Architecture components(View Pager,Recycler withmultiple Items). Architecture used:MVC";
-         androidbutton.getElementsByTagName('a')[0].href="https://appetize.io/app/q1edkvrn3p9r3g13x8h0qx5904?device=nexus5&scale=75&orientation=portrait&osVersion=8.1";
-          androidbutton.getElementsByTagName('a')[1].href="https://github.com/BALASHEKHAR/moreToStore";
-
-      
       }
-    }
-    let androidprojectno=0;
+      let androidprojectno = 0;
 
-    const androidleft= document.getElementById("android-left");
-    const androidright= document.getElementById("android-right");
+      const androidleft = document.getElementById("android-left");
+      const androidright = document.getElementById("android-right");
 
-    androidleft.addEventListener('click',()=>{
-      androidprojectno--;
-      if(androidprojectno<0)
-        androidrojectno=2;
+      androidleft.addEventListener("click", () => {
+        androidprojectno--;
+        if (androidprojectno < 0) androidrojectno = 2;
 
-      androiddisplay(androidprojectno);
+        androiddisplay(androidprojectno);
+      });
+      androidright.addEventListener("click", () => {
+        androidprojectno++;
+        androidprojectno = androidprojectno % 3;
+        androiddisplay(androidprojectno);
+      });
 
+      //web projects
+      function webdisplay(no) {
+        const webbody = document.getElementById("web-body");
+        const webimg = document.getElementById("web-img");
+        const webbutton = document.getElementById("web-button");
 
-    });
-    androidright.addEventListener('click',()=>{
-      androidprojectno++;
-      androidprojectno=androidprojectno%3;
-       androiddisplay(androidprojectno);
-    });
+        switch (no) {
+          case 0:
+            webimg.src = "images/foodwaste.png";
+            webbody.getElementsByTagName("h2")[0].textContent =
+              "Food Waste Management";
+            webbody.getElementsByTagName("p")[0].textContent =
+              "Food Waste Management is a full stack web application that enable user to login and post the food availability in their areas or known location. And any one to see the post from other people and able to track the location and directions from their current location. Tech Stack used: MongoDB, (Mongoose), Node.js, React, Express,Material-UI, Mapbox-gl, ftp-mail, JWT (Authentication), Redux, (React-Redux), React-swipeable-views";
+            webbutton.getElementsByTagName("a")[0].href =
+              "https://food-waste-managements.netlify.app/#/";
+            webbutton.getElementsByTagName("a")[1].href =
+              "https://github.com/BALASHEKHAR/food-waste-management-client";
 
+            break;
+          case 1:
+            webimg.src = "images/moretostore (1).png";
+            webbody.getElementsByTagName("h2")[0].textContent =
+              "More to Store Admin Panel";
+            webbody.getElementsByTagName("p")[0].textContent =
+              "More-To-Store admin panel for an app made for Android app.The website has the following features :The admin can add new items, issue items to some existing users. The admin can also view the items of more to store, an Admin can edit and delete the items if he wants. The users can create their account, search for items, edit their profile.";
+            webbutton.getElementsByTagName("a")[0].href =
+              "https://jagan9.github.io/More-to-store-admin-panel/#/";
+            webbutton.getElementsByTagName("a")[1].href =
+              "https://github.com/jagan9/More-To-Store";
 
+            break;
+          case 2:
+            webimg.src = "images/corona.png";
+            webbody.getElementsByTagName("h2")[0].textContent =
+              "Corona-Tracker Web App";
+            webbody.getElementsByTagName("p")[0].textContent =
+              "A progressive web app to serve corona cases are there in state , country , district. The user can search another state, or district.A website made using Bootstrape to display the corona cases are there in state , country , district. The user can search another state, or district. The user can find easily understand th cases information due to in this I used Fusion Charts ['charts Library'] .";
+            webbutton.getElementsByTagName("a")[0].href =
+              "https://coronaweb.netlify.app/";
+            webbutton.getElementsByTagName("a")[1].href =
+              "https://github.com/jagan9/Corona-Tracker";
 
-    //web projects
-    function webdisplay(no) {
-    const webbody= document.getElementById("web-body");
-    const webimg= document.getElementById("web-img");
-    const webbutton= document.getElementById("web-button");
-
-      switch(no)
-      {
-        case 0:
-        webimg.src="images/foodwaste.png";
-        webbody.getElementsByTagName('h2')[0].textContent="Food Waste Management"
-        webbody.getElementsByTagName('p')[0].textContent="Food Waste Management is a full stack web application that enable user to login and post the food availability in their areas or known location. And any one to see the post from other people and able to track the location and directions from their current location. Tech Stack used: MongoDB, (Mongoose), Node.js, React, Express,Material-UI, Mapbox-gl, ftp-mail, JWT (Authentication), Redux, (React-Redux), React-swipeable-views"
-          webbutton.getElementsByTagName('a')[0].href="https://food-waste-managements.netlify.app/#/";
-          webbutton.getElementsByTagName('a')[1].href="https://github.com/BALASHEKHAR/food-waste-management-client";
-
-        break;
-        case 1:
-         webimg.src="images/moretostore (1).png";
-         webbody.getElementsByTagName('h2')[0].textContent="More to Store Admin Panel"
-        webbody.getElementsByTagName('p')[0].textContent="More-To-Store admin panel for an app made for Android app.The website has the following features :The admin can add new items, issue items to some existing users. The admin can also view the items of more to store, an Admin can edit and delete the items if he wants. The users can create their account, search for items, edit their profile.";
-         webbutton.getElementsByTagName('a')[0].href="https://jagan9.github.io/More-to-store-admin-panel/#/";
-          webbutton.getElementsByTagName('a')[1].href="https://github.com/jagan9/More-To-Store";
-
-        break;
-        case 2:
-         webimg.src="images/corona.png";
-         webbody.getElementsByTagName('h2')[0].textContent="Corona-Tracker Web App"
-        webbody.getElementsByTagName('p')[0].textContent="A progressive web app to serve corona cases are there in state , country , district. The user can search another state, or district.A website made using Bootstrape to display the corona cases are there in state , country , district. The user can search another state, or district. The user can find easily understand th cases information due to in this I used Fusion Charts ['charts Library'] .";
-         webbutton.getElementsByTagName('a')[0].href="https://coronaweb.netlify.app/";
-          webbutton.getElementsByTagName('a')[1].href="https://github.com/jagan9/Corona-Tracker";
-
-        break;
-        default:
-         webimg.src="images/foodwaste.png";
-          webbody.getElementsByTagName('h2')[0].textContent="Food Waste Management"
-         webbody.getElementsByTagName('p')[0].textContent="Food Waste Management is a full stack web application that enable user to login and post the food availability in their areas or known location. And any one to see the post from other people and able to track the location and directions from their current location. Tech Stack used: MongoDB, (Mongoose), Node.js, React, Express,Material-UI, Mapbox-gl, ftp-mail, JWT (Authentication), Redux, (React-Redux), React-swipeable-views";
-         webbutton.getElementsByTagName('a')[0].href="https://food-waste-managements.netlify.app/#/";
-          webbutton.getElementsByTagName('a')[1].href="https://github.com/BALASHEKHAR/food-waste-management-client";
-
-      
+            break;
+          default:
+            webimg.src = "images/foodwaste.png";
+            webbody.getElementsByTagName("h2")[0].textContent =
+              "Food Waste Management";
+            webbody.getElementsByTagName("p")[0].textContent =
+              "Food Waste Management is a full stack web application that enable user to login and post the food availability in their areas or known location. And any one to see the post from other people and able to track the location and directions from their current location. Tech Stack used: MongoDB, (Mongoose), Node.js, React, Express,Material-UI, Mapbox-gl, ftp-mail, JWT (Authentication), Redux, (React-Redux), React-swipeable-views";
+            webbutton.getElementsByTagName("a")[0].href =
+              "https://food-waste-managements.netlify.app/#/";
+            webbutton.getElementsByTagName("a")[1].href =
+              "https://github.com/BALASHEKHAR/food-waste-management-client";
+        }
       }
-    }
-    let webprojectno=0;
+      let webprojectno = 0;
 
-    const webleft= document.getElementById("web-left");
-    const webright= document.getElementById("web-right");
+      const webleft = document.getElementById("web-left");
+      const webright = document.getElementById("web-right");
 
-    webleft.addEventListener('click',()=>{
-      webprojectno--;
-      if(webprojectno<0)
-        webprojectno=2;
+      webleft.addEventListener("click", () => {
+        webprojectno--;
+        if (webprojectno < 0) webprojectno = 2;
 
-      webdisplay(webprojectno);
-
-
-    });
-    webright.addEventListener('click',()=>{
-      webprojectno++;
-      webprojectno=webprojectno%3;
-       webdisplay(webprojectno);
-    });
-
-    
-  </script>
- <!-- mail to -->
-  <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"></script> 
-   <!--  send form -->
-  <script src="https://smtpjs.com/v3/smtp.js"></script>  
- 
-</body>
-
+        webdisplay(webprojectno);
+      });
+      webright.addEventListener("click", () => {
+        webprojectno++;
+        webprojectno = webprojectno % 3;
+        webdisplay(webprojectno);
+      });
+    </script>
+    <!-- mail to -->
+    <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"></script>
+    <!--  send form -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </body>
 </html>
