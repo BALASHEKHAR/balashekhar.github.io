@@ -858,21 +858,7 @@
   .form-name input{
     margin: 0px 5px;
   }
-  .footer-container{
-    display: flex;
-    flex-wrap: wrap;
-  
-    padding: 10px 30px;
-    font-size: 18px;
-    line-height: 25px;
-    font-weight: 600;
-    opacity: 0.9;
-    color: #182d6c;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #b6b9c0;
-    margin-top: 20px;
-  }
+
   
   .footer-button button{
     
@@ -1160,20 +1146,4 @@
      bottom: 25px;
      right: 10px;
   }
-  .snackbar{
-    position: fixed;
-    bottom: 30px;
-    left: 20px;
-    padding: 0px 10px;
-    display: none;
-    align-items: center;
-    z-index: 300;
-    border-radius: 5px;
-    color: #fff;
-    
-    background-color: green;
-  }
-  .snackbar img{
-    height: 66px;
-    margin: 5px 10px;
-  }
+
