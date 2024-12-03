@@ -9,3 +9,11 @@ function LoadHeader() {
       console.error("Error loading header:", error);
     });
 }
+
+function hideExperience() {
+  setTimeout(() => {
+    document.getElementById("experience").style.display = "none";
+  }, 10000);
+}
+
+hideExperience();
