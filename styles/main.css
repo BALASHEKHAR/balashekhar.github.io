@@ -98,23 +98,7 @@
   
   }
   
-  
-  .imag{
-    z-index: 100;
-    flex: 1;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: center;
-    background-position-y: center;
-    height: 100%;
-    background-image: url('../assets/images/balac.png');
-  }
-  .imag img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 0.2;
-  }
+
   .theme{
     position:absolute;
     bottom:20px;
@@ -823,7 +807,7 @@
     font-size: 17px;
     font-weight: 600;
   }
-  .form-details-wrapper  button , .footer-button button{
+  .form-details-wrapper  button{
     outline: none;
     
     color: #182d6c;
@@ -838,13 +822,8 @@
     transition: 0.2s ease;
     border: 2px solid #182d6c;
   }
-  .footer-button button{
-    position: absolute;
-    bottom: 0px;
-    left: 25px;
-  
-  }
-  .form-details-wrapper  button:hover,.footer-button button:hover{
+
+  .form-details-wrapper  button:hover{
     background-color: #182d6c;
     border-radius: 5px;
     color: #fff;
@@ -859,88 +838,6 @@
     margin: 0px 5px;
   }
 
-  
-  .footer-button button{
-    
-    padding: 10px 15px;
-    border: 1px solid #182d6c;
-  }
-  
-  @media screen and (max-width: 940px) {
-    #bubble{
-      display: none;
-    }
-    .form-container{
-      background-image: linear-gradient(#fff,#fff);
-    }
-    .skill-container {
-      flex-direction: column;
-      align-items: center;
-    }
-    .skill-container1{
-    max-width: 100%;
-    padding: 20px;
-    margin-left: 0px !important;
-  }
-  .dropskill-container{
-   max-width: 80%;
-     margin: 0px auto;
-   
-  }
-  .skills-main-div{
-    max-width: 75%;
-    margin: 0px auto !important;
-  }
-  .drop-skill-wrapper{
-    padding: 0px;
-    margin: 30px 0 20px 0;
-  }
-  
-  }
-  
-  @media screen and (max-width: 700px){
-    .aboutme-text h2,.aboutme-text p{
-  margin: 0px;
-  padding: 0;
-    }
-    .theme button i{
-      margin-right: 0px !important;
-    }
-   
-  
-    .main-info{
-      margin-left: 0px !important;
-    }
-    
-    .form-container{
-  
-      flex-direction: column;
-    }
-    .project-img{
-      order: -1;
-      
-      width: 70%;
-      margin: auto;
-    }
-    .project-img2{
-      /display: none;/
-      width: 80%;
-      
-      margin: auto;
-  
-    }
-    .project-main2,.project-main{
-      justify-content: center;
-      flex-direction: column;
-    }
-    .projects-container1{
-      width: 100%;
-    }
-    .form-img-wrapper img{
-      width: 70%;
-  margin-top: 40px;
-    }
-  }
   .experience-container{
      margin: 20px 0px 0px 0px;
     
@@ -1147,3 +1044,79 @@
      right: 10px;
   }
 
+
+  @media screen and (max-width: 940px) {
+    #bubble{
+      display: none;
+    }
+    .form-container{
+      background-image: linear-gradient(#fff,#fff);
+    }
+    .skill-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .skill-container1{
+    max-width: 100%;
+    padding: 20px;
+    margin-left: 0px !important;
+  }
+  .dropskill-container{
+   max-width: 80%;
+     margin: 0px auto;
+   
+  }
+  .skills-main-div{
+    max-width: 75%;
+    margin: 0px auto !important;
+  }
+  .drop-skill-wrapper{
+    padding: 0px;
+    margin: 30px 0 20px 0;
+  }
+  
+  }
+  
+  @media screen and (max-width: 700px){
+    .aboutme-text h2,.aboutme-text p{
+  margin: 0px;
+  padding: 0;
+    }
+    .theme button i{
+      margin-right: 0px !important;
+    }
+   
+  
+    .main-info{
+      margin-left: 0px !important;
+    }
+    
+    .form-container{
+  
+      flex-direction: column;
+    }
+    .project-img{
+      order: -1;
+      
+      width: 70%;
+      margin: auto;
+    }
+    .project-img2{
+      /display: none;/
+      width: 80%;
+      
+      margin: auto;
+  
+    }
+    .project-main2,.project-main{
+      justify-content: center;
+      flex-direction: column;
+    }
+    .projects-container1{
+      width: 100%;
+    }
+    .form-img-wrapper img{
+      width: 70%;
+  margin-top: 40px;
+    }
+  }

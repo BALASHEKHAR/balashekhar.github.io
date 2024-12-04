@@ -1,0 +1,40 @@
+.footer-button button {
+  outline: none;
+  color: #182d6c;
+  float: right;
+  cursor: pointer;
+  margin: 7px auto;
+  background-color: transparent;
+  opacity: 0.8;
+  border-radius: 8px;
+  transition: 0.2s ease;
+  border: 2px solid #182d6c;
+  padding: 10px 15px;
+  border: 1px solid #182d6c;
+  position: absolute;
+  bottom: 0px;
+  left: 25px;
+}
+
+.footer-button button:hover {
+  background-color: #182d6c;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.imag {
+  z-index: 100;
+  flex: 1;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: center;
+  height: 100%;
+  background-image: url("../../assets/images/main_info/balac.png");
+}
+.imag img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.2;
+}
