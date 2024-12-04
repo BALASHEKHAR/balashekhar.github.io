@@ -2,7 +2,7 @@ function LoadHeader() {
   fetch("components/header/header.html")
     .then((res) => res.text())
     .then((data) => {
-      const header = document.getElementById("header");
+      const header = document.querySelector(".header");
       header.innerHTML = data;
     })
     .catch((error) => {
