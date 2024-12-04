@@ -9,3 +9,7 @@ function LoadFooter() {
       console.error("Error loading footer:", error);
     });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  LoadFooter();
+});

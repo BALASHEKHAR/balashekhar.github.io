@@ -35,6 +35,10 @@
     <link rel="stylesheet" href="components/footer/footer.css" />
     <link rel="stylesheet" href="components/main_info/main_info.css" />
 
+    <!-- Custom JS -->
+    <script src="components/header/header.js"></script>
+    <script src="components/main_info/main_info.js"></script>
+    <script src="components/footer/footer.js"></script>
     <!-- Load Favicons -->
     <script src="favicon.js"></script>
 
@@ -305,18 +309,10 @@
       <div class="home-container b">
         <!-- header component -->
         <div class="header"></div>
-        <script src="components/header/header.js"></script>
-        <script>
-          LoadHeader();
-        </script>
         <!-- header component end -->
 
         <!-- main info component -->
         <div class="main-info"></div>
-        <script src="components/main_info/main_info.js"></script>
-        <script>
-          LoadMainInfo();
-        </script>
         <!-- main info component end -->
       </div>
 
@@ -983,10 +979,6 @@
 
     <!-- footer component -->
     <div class="footer-container b"></div>
-    <script src="components/footer/footer.js"></script>
-    <script>
-      LoadFooter();
-    </script>
     <!-- footer component -->
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -1110,9 +1102,6 @@
       const bubble = document.getElementById("bubble");
       const contact = document.getElementById("contact");
 
-      let darkmode = false;
-      const btn = document.getElementById("theme");
-
       let open = false;
 
       document.getElementById("startJ").addEventListener("click", () => {
@@ -1131,6 +1120,8 @@
           bubble.style.display = "block";
           contact.style.backgroundImage = `url(assets/images/pro.png)`;
         }
+
+        const btn = document.getElementById("theme");
 
         if (window.innerWidth > 700) {
           btn.getElementsByTagName("span")[0].textContent = "Lights On";
@@ -1250,56 +1241,6 @@
         tab2icons.style.display = "none";
         tab3icons.style.display = "none";
         tab4icons.style.display = "flex";
-      });
-
-      btn.addEventListener("click", () => {
-        if (darkmode === false) {
-          document.getElementById("dark-back-img2").src =
-            "assets/images/subtractdark.jpg";
-          darkmode = !darkmode;
-
-          if (window.innerWidth > 700) {
-            btn.getElementsByTagName("span")[0].textContent = "Lights On";
-          } else {
-            btn.getElementsByTagName("span")[0].textContent = "";
-          }
-
-          var head = document.getElementsByTagName("HEAD")[0];
-          var link = document.createElement("link");
-          link.rel = "stylesheet";
-          link.type = "text/css";
-          link.href = "styles/themes/dark-theme.css";
-          link.id = "dark";
-          head.appendChild(link);
-
-          var ic = btn.getElementsByTagName("i")[0];
-
-          ic.className = "fas fa-sun";
-          ic.style.borderRadius = "50%";
-          ic.style.fontWeight = "800";
-          ic.style.marginRight = "5px";
-
-          head.appendChild(link);
-        } else {
-          document.getElementById("dark-back-img2").src =
-            "assets/images/Subtract.png";
-
-          darkmode = !darkmode;
-          if (window.innerWidth > 700) {
-            btn.getElementsByTagName("span")[0].textContent = "Lights Off";
-          } else {
-            btn.getElementsByTagName("span")[0].textContent = "";
-          }
-
-          var ic = btn.getElementsByTagName("i")[0];
-          ic.className = "fas fa-moon";
-          ic.style.borderRadius = "50%";
-          ic.style.fontWeight = "800";
-          ic.style.marginRight = "5px";
-
-          darkcss = document.getElementById("dark");
-          darkcss.parentNode.removeChild(darkcss);
-        }
       });
 
       //android projects

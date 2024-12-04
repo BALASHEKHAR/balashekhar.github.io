@@ -16,4 +16,7 @@ function hideExperience() {
   }, 10000);
 }
 
-hideExperience();
+document.addEventListener("DOMContentLoaded", () => {
+  LoadHeader();
+  hideExperience();
+});
