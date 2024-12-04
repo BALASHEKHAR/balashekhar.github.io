@@ -9,7 +9,6 @@ function switchTheme() {
   let darkmode = false;
   const btn = document.getElementById("theme");
   btn.addEventListener("click", () => {
-    console.log(darkmode);
     if (darkmode === false) {
       document.getElementById("dark-back-img2").src =
         "assets/images/subtractdark.jpg";
@@ -56,6 +55,14 @@ function switchTheme() {
 
       darkcss = document.getElementById("dark");
       darkcss.parentNode.removeChild(darkcss);
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 700) {
+      btn.getElementsByTagName("span")[0].textContent = "Lights On";
+    } else {
+      btn.getElementsByTagName("span")[0].textContent = "";
     }
   });
 }
