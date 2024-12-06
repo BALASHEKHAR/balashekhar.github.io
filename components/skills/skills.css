@@ -104,11 +104,11 @@
     margin-left: 0px !important;
   }
   .dropskill-container {
-    max-width: 80%;
-    margin: 0px auto;
+    max-width: 100% !important;
+    margin: 0px auto !important;
   }
   .skills-main-div {
-    max-width: 75%;
+    width: 100% !important;
     margin: 0px auto !important;
   }
   .drop-skill-wrapper {
