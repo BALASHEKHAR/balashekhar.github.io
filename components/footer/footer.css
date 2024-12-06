@@ -12,6 +12,7 @@
   background-color: #b6b9c0;
   margin-top: 20px;
 }
+
 .snackbar {
   position: fixed;
   bottom: 30px;
@@ -26,6 +27,7 @@
   background-color: green;
   font-weight: 400;
 }
+
 .snackbar img {
   height: 66px;
   margin: 5px 10px;
