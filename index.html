@@ -36,274 +36,18 @@
     <link rel="stylesheet" href="components/main_info/main_info.css" />
     <link rel="stylesheet" href="components/about_me/about_me.css" />
     <link rel="stylesheet" href="components/education/education.css" />
+    <link rel="stylesheet" href="components/skills/skills.css" />
     <!-- Custom JS -->
     <script src="components/header/header.js"></script>
     <script src="components/main_info/main_info.js"></script>
     <script src="components/footer/footer.js"></script>
     <script src="components/about_me/about_me.js"></script>
     <script src="components/education/education.js"></script>
+    <script src="components/skills/skills.js"></script>
     <!-- Load Favicons -->
     <script src="favicon.js"></script>
 
-    <script>
-      function allowDrop(ev) {
-        ev.preventDefault();
-      }
-
-      function drag(ev) {
-        ev.dataTransfer.setData("text", ev.target.id);
-      }
-
-      function addscale(n) {
-        const dimg1 = document.getElementById("drop-bar-level-img1");
-        const dimg2 = document.getElementById("drop-bar-level-img2");
-        const dimg3 = document.getElementById("drop-bar-level-img3");
-
-        if (n < 45) {
-          dimg1.classList.add("scale");
-          dimg2.classList.remove("scale");
-          dimg3.classList.remove("scale");
-        } else if (n < 95) {
-          dimg1.classList.add("scale");
-          dimg2.classList.add("scale");
-          dimg3.classList.remove("scale");
-        } else if (n <= 100) {
-          dimg1.classList.add("scale");
-          dimg2.classList.add("scale");
-          dimg3.classList.add("scale");
-        } else {
-          dimg1.classList.remove("scale");
-          dimg2.classList.remove("scale");
-          dimg3.classList.remove("scale");
-        }
-      }
-
-      function addDetails(title, text, np, ex) {
-        const droptext = document.getElementById("drop-text");
-        const droptitle = document.getElementById("drop-title");
-        const dropnp = document.getElementById("drop-np");
-        const dropex = document.getElementById("drop-ex");
-
-        droptitle.textContent = title;
-        droptext.textContent = text;
-        dropnp.textContent = np;
-        dropex.textContent = ex;
-      }
-
-      function drop(ev) {
-        ev.preventDefault();
-        var data = ev.dataTransfer.getData("text");
-        var it = document.getElementById(data);
-
-        ev.target.style.backgroundImage = `url(${it.src})`;
-        const bar = document.getElementById("drop-bar-line-value");
-
-        switch (it.id) {
-          case "react-logo":
-            addDetails(
-              "React Js",
-              "React is an open-source front-end JavaScript library developed by Facebook for building user interfaces or UI components.",
-              "5",
-              "0.4"
-            );
-            bar.style.width = "65%";
-            addscale(65);
-            break;
-          case "js-logo":
-            addDetails(
-              "Node Js",
-              "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that executes JavaScript code outside a web browser.",
-              "5",
-              "0.6"
-            );
-            bar.style.width = "60%";
-            addscale(60);
-            break;
-          case "firebase-logo":
-            addDetails(
-              "Firebase",
-              "Firebase is a cloud platform that includes services like analytics, authentication, realtime databases, configuration, file storage.",
-              "5",
-              "1"
-            );
-            bar.style.width = "55%";
-            addscale(55);
-            break;
-          case "mongodo-logo":
-            addDetails(
-              "Mongo DB",
-              "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program.",
-              "2",
-              "0.4"
-            );
-            bar.style.width = "60%";
-            addscale(60);
-            break;
-          case "express-logo":
-            addDetails(
-              "Express Js",
-              "Express.js, or simply Express, is a back end web application framework for Node.js, it is designed for building web applications and APIs.",
-              "6",
-              "0.5"
-            );
-            bar.style.width = "65%";
-            addscale(65);
-            break;
-          case "android-logo":
-            addDetails(
-              "Android",
-              "Android Studio is Android's official IDE. It is purpose-built for Android to accelerate your development and help you build the highest-quality apps for every Android device.",
-              "6",
-              "1"
-            );
-            bar.style.width = "67%";
-            addscale(67);
-            break;
-          case "java-logo":
-            addDetails(
-              "Java",
-              "One of the most widely used programming languages, Java is used as the server-side language for most back-end development projects, including those involving big data and Android development.",
-              "2",
-              "0.1"
-            );
-            bar.style.width = "40%";
-            addscale(40);
-            break;
-          case "ds-logo":
-            addDetails(
-              "Data Structures",
-              "data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data, i.e., it is an algebraic structure about data",
-              "-",
-              "-"
-            );
-            bar.style.width = "60%";
-            addscale(60);
-            break;
-          case "materialui-logo":
-            addDetails(
-              "Material UI",
-              "Material-UI is an open-source project that features React components that implement Google's Material Design.",
-              "3",
-              "0.4"
-            );
-            bar.style.width = "70%";
-            addscale(70);
-            break;
-          case "cplusplus-logo":
-            addDetails(
-              "C++",
-              "C++ is a powerful general-purpose programming language it supports different ways of programming like procedural, object-oriented, functional, etc,.",
-              "1",
-              "1"
-            );
-            bar.style.width = "80%";
-            addscale(80);
-            break;
-          case "algo-logo":
-            bar.style.width = "70%";
-            addDetails(
-              "Algorithm",
-              "Algorithm is a step-by-step procedure, which defines a set of instructions to be executed in a certain order to get the desired output. and are generally created independent of underlying languages",
-              "1",
-              "1"
-            );
-            addscale(70);
-            break;
-          case "c-logo":
-            addDetails(
-              "C",
-              "C programming is a general-purpose, procedural, imperative computer programming language. It can be used to develop software like operating systems, databases, compilers, and so on.",
-              "1",
-              "1"
-            );
-            bar.style.width = "70%";
-            addscale(70);
-            break;
-
-          case "figma-logo":
-            addDetails(
-              "Figma",
-              "Figma is a web-based graphics editing and user interface design app. You can use it to do all kinds of graphic design work from wireframing websites, designing mobile app interfaces, prototyping designs, crafting social media posts, and everything in between",
-              "1",
-              "0.4"
-            );
-            bar.style.width = "40%";
-            addscale(40);
-            break;
-          case "css-logo":
-            addDetails(
-              "CSS",
-              "Cascading Style Sheets, fondly referred to as CSS, is a simple design language intended to simplify the process of making web pages presentable. CSS handles the look and feel part of a web page",
-              "5",
-              "1"
-            );
-            bar.style.width = "75%";
-            addscale(75);
-            break;
-          case "xml-logo":
-            addDetails(
-              "XML",
-              "An XML file is an extensible markup language file, and it is used to structure data for storage and transport. In an XML file, there are both tags and text.",
-              "4",
-              "0.4"
-            );
-            bar.style.width = "65%";
-            addscale(65);
-            break;
-          case "bootstrap-logo":
-            addDetails(
-              "Bootstrap",
-              "Bootstrap is a potent front-end framework used to create modern websites and web apps. It's open-source and free to use, yet features numerous HTML and CSS templates for UI interface elements such as buttons and forms.",
-              "3",
-              "0.4"
-            );
-            bar.style.width = "65%";
-            addscale(65);
-            break;
-
-          case "git-logo":
-            addDetails(
-              "Git",
-              "Git tracks the changes you make to files, so you have a record of what has been done, and you can revert to specific versions should you ever need to. Git also makes collaboration easier, allowing changes by multiple people to all be merged into one source.",
-              "-",
-              "1"
-            );
-            bar.style.width = "33%";
-            addscale(33);
-            break;
-          case "postman-logo":
-            addDetails(
-              "Postman",
-              "Postman is an API client that makes it easy for developers to create, share, test and document APIs. This is done by allowing users to create and save simple and complex HTTP/s requests, as well as read their responses.",
-              "-",
-              "-"
-            );
-            bar.style.width = "40%";
-            addscale(40);
-            break;
-          case "msexcel-logo":
-            addDetails(
-              "MS Excel",
-              "Excel is typically used to organize data and perform financial analysis. It is used across all business functions and at companies from small to large.",
-              "-",
-              "1"
-            );
-            bar.style.width = "40%";
-            addscale(40);
-            break;
-
-          default:
-            addDetails(
-              "Drop a Skill",
-              "This is a skills record selector. It'll help you know about my skills in an interactive way. Drag a skill from the skillset and drop in the above circle! (Just tap on the skill if you are using a mobile phone)",
-              "-",
-              "-"
-            );
-            bar.style.width = "0%";
-            addscale(0);
-        }
-      }
-    </script>
+  
     <title>bala</title>
   </head>
 
@@ -327,425 +71,123 @@
       <div id="education" class="education"></div>
       <!-- education component end -->
 
-      <div class="background">
-        <div id="skills">
-          <div data-aos="fade-up" class="skill-container">
-            <div class="skill-container1">
-              <h2>Skills</h2>
-              <p>
-                Over the term of my college life, <br />
-                I have been teaching myself different things and most of it was
-                on my own because none of the colleges teach you the latest and
-                advanced tech.
-                <br /><br />"Exploring is something you have to do on your own"
-              </p>
-              <div class="skills-main-div">
-                <div class="skill-container-tabs">
-                  <a id="tab-1" class="active">
-                    <i class="fas fa-code"></i> Technical</a
-                  >
-                  <a id="tab-2"><i class="far fa-edit"> </i> Design</a>
-                  <a id="tab-3"><i class="fa fa-tools"></i> Tools</a>
-                  <a style="display: none" id="tab-4"
-                    ><i class="fa fa-tasks"></i> Programming</a
-                  >
-                </div>
+      <!-- skills component -->
+      <div id="skills" class="skills"></div>
+      <!-- skills component end -->
 
-                <div id="tab-1-icons" class="skill-container-logos">
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="c-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/c.png"
-                    alt=""
-                  />
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="cplusplus-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/c++.png"
-                    alt=""
-                  />
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="algo-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/algo.png"
-                    alt=""
-                  />
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="ds-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/ds.png"
-                    alt=""
-                  />
+      <!-- <div data-aos="fade-up"  class="project-main2">
+<div class="project-img2">
+      <img src="file:///C:/Users/kaman/OneDrive/Desktop/r/mobile.png" alt=""></div>
+      <div class="projects-container1">
 
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="react-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/react.png"
-                    alt=""
-                  />
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="js-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/js.png"
-                    alt=""
-                  />
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="firebase-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/firebaseLogo.png"
-                    alt=""
-                  />
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="mongodo-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/mongo.png"
-                    alt=""
-                  />
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="express-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/express.png"
-                    alt=""
-                  />
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="android-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/android.png"
-                    alt=""
-                  />
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="java-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/java.jpg"
-                    alt=""
-                  />
-                </div>
-
-                <div
-                  style="display: none"
-                  id="tab-2-icons"
-                  class="skill-container-logos"
-                >
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="css-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/css.png"
-                    alt=""
-                  />
-
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="figma-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/figma.png"
-                    alt=""
-                  />
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="materialui-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/mUI.png"
-                    alt=""
-                  />
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="xml-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/xml.png"
-                    alt=""
-                  />
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="bootstrap-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/bootstrap.png"
-                    alt=""
-                  />
-                </div>
-
-                <div
-                  style="display: none"
-                  id="tab-3-icons"
-                  class="skill-container-logos"
-                >
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="git-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/git.png"
-                    alt=""
-                  />
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="postman-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/postman.png"
-                    alt=""
-                  />
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="msexcel-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/msexcel.png"
-                    alt=""
-                  />
-                </div>
-
-                <div
-                  style="display: none"
-                  id="tab-4-icons"
-                  class="skill-container-logos"
-                >
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="team-leader-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/leaderArtboard 1.png"
-                    alt=""
-                  />
-                  <img
-                    width="50px"
-                    height="50px"
-                    id="event-manager-logo"
-                    draggable="true"
-                    ondragstart="drag(event)"
-                    src="assets/images/eventManagementArtboard 1.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="dropskill-container">
-              <div class="drop-skill-wrapper">
-                <div class="drop-img">
-                  <div
-                    id="div1"
-                    ondrop="drop(event)"
-                    ondragover="allowDrop(event)"
-                  ></div>
-                  <h2 id="drop-title">Drop a Skill</h2>
-                </div>
-                <div id="drop-text" class="drop-desc">
-                  This is a skills record selector. It'll help you know about my
-                  skills in an interactive way. Drag a skill from the skillset
-                  and drop in the above circle! (Just tap on the skill if you
-                  are using a mobile phone)
-                </div>
-                <div class="drop-texts">
-                  <div class="drop-projects">
-                    <h4>Number of Projects <span id="drop-np">-</span></h4>
-                  </div>
-
-                  <div class="drop-year">
-                    <h4>Experience (years) <span id="drop-ex">-</span></h4>
-                  </div>
-                </div>
-                <div class="drop-bar">
-                  <div class="drop-bar-line">
-                    <div
-                      id="drop-bar-line-value"
-                      class="drop-bar-line-value"
-                    ></div>
-                  </div>
-                  <img
-                    id="drop-bar-level-img1"
-                    src="assets/images/beginner.png"
-                    alt=""
-                  />
-                  <img
-                    id="drop-bar-level-img2"
-                    src="assets/images/inter.png"
-                    alt=""
-                  />
-                  <img
-                    id="drop-bar-level-img3"
-                    src="assets/images/expert.png"
-                    alt=""
-                  />
-                </div>
-                <div class="drop-level">
-                  <span>Beginner</span>
-                  <span>Intermediate</span>
-                  <span>Expert</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="projects" class="projects-container">
-          <h2 data-aos="fade-right" class="pro-heading">Projects</h2>
-          <div class="project-main">
-            <div data-aos="fade-right" class="projects-container1">
-              <div class="pro-buttons">
-                <i id="web-left" class="fas fa-arrow-circle-left"></i>
-                <i id="web-right" class="fas fa-arrow-circle-right"></i>
-              </div>
-
-              <div id="web-body" class="pro-desc">
-                <h2>Food Waste Management</h2>
-                <br />
-                <p>
-                  Food Waste Management is a full stack web application that
-                  enable user to login and post the food availability in their
-                  areas or known location. And any one to see the post from
-                  other people and able to track the location and directions
-                  from their current location. Tech Stack used: MongoDB,
-                  (Mongoose), Node.js, React, Express,Material-UI, Mapbox-gl,
-                  ftp-mail, JWT (Authentication), Redux, (React-Redux),
-                  React-swipeable-views
-                </p>
-              </div>
-              <div id="web-button" class="pro-navi">
-                <a
-                  href="https://food-waste-managements.netlify.app/#/"
-                  target="_blank"
-                  >open website</a
-                >
-                <a
-                  href="https://github.com/BALASHEKHAR/food-waste-management-client"
-                  target="_blank"
-                  >Git Repo</a
-                >
-              </div>
-            </div>
-
-            <div data-aos="fade-left" class="project-img">
-              <img
-                class="img-a"
-                src="assets/images/118-1185326_computer-frames-for-youtube-videos-png.png"
-                alt=""
-              />
-              <img
-                id="web-img"
-                class="img-b"
-                src="assets/images/foodwaste.png"
-                alt=""
-              />
-            </div>
-          </div>
-
-          <div class="project-main2">
-            <div data-aos="fade-left" class="project-img2">
-              <img
-                id="dark-back-img2"
-                class="img-a2"
-                src="assets/images/Subtract.png"
-                alt=""
-              />
-              <img
-                id="android-img"
-                class="img-b2"
-                src="assets/images/app0.png"
-                alt=""
-              />
-            </div>
-            <div data-aos="fade-right" class="projects-container1">
-              <div class="pro-buttons">
-                <i id="android-left" class="fas fa-arrow-circle-left"></i>
-                <i id="android-right" class="fas fa-arrow-circle-right"></i>
-              </div>
-              <div id="android-body" class="pro-desc">
-                <h2>More to Store</h2>
-                <br />
-                <p>
-                  More-To-Store is an app where you can buy items like flipkart,
-                  Amazon.Technologies used:Firebase Libraries(Realtime
-                  database,storage,Authentication),Android Architecture
-                  components(View Pager,Recycler withmultiple Items).
-                  Architecture used:MVC
-                </p>
-              </div>
-              <div id="android-button" class="pro-navi">
-                <a
-                  target="_blank"
-                  href="https://appetize.io/app/q1edkvrn3p9r3g13x8h0qx5904?device=nexus5&scale=75&orientation=portrait&osVersion=8.1"
-                  >open website</a
-                >
-                <a
-                  target="_blank"
-                  href="https://github.com/BALASHEKHAR/moreToStore"
-                  >Git Repo</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- <div data-aos="fade-up"  class="project-main2">
-  <div class="project-img2">
-          <img src="file:///C:/Users/kaman/OneDrive/Desktop/r/mobile.png" alt=""></div>
-          <div class="projects-container1">
-
-          
-          <div class="pro-desc">
-            <h2>Covid Resources Point</h2>
-            <br>
-            <p>
-              The Covid Resources website gives users a platform to put up covid resources leads. In addition to that, users can also post resource requests and has Covid care guides, important links and google authentication for login. The server updates the data on its own every 36 hours and keeps track of users who are reported for inappropriate activities or those who are not responding and takes action accordingly.
-            </p>
-          </div>
-          <div class="pro-navi">
-            <a href="#">open website</a>
-            <a href="#">Git Repo</a>
-          </div>
-        </div>
-
-        
-          </div> -->
+      
+      <div class="pro-desc">
+        <h2>Covid Resources Point</h2>
+        <br>
+        <p>
+          The Covid Resources website gives users a platform to put up covid resources leads. In addition to that, users can also post resource requests and has Covid care guides, important links and google authentication for login. The server updates the data on its own every 36 hours and keeps track of users who are reported for inappropriate activities or those who are not responding and takes action accordingly.
+        </p>
+      </div>
+      <div class="pro-navi">
+        <a href="#">open website</a>
+        <a href="#">Git Repo</a>
         </div>
       </div>
+      </div> -->
+
+      <div id="projects" class="projects-container">
+        <h2 data-aos="fade-right" class="pro-heading">Projects</h2>
+        <div class="project-main">
+          <div data-aos="fade-right" class="projects-container1">
+            <div class="pro-buttons">
+              <i id="web-left" class="fas fa-arrow-circle-left"></i>
+              <i id="web-right" class="fas fa-arrow-circle-right"></i>
+            </div>
+      
+            <div id="web-body" class="pro-desc">
+              <h2>Food Waste Management</h2>
+              <br />
+              <p>
+                Food Waste Management is a full stack web application that enable user
+                to login and post the food availability in their areas or known
+                location. And any one to see the post from other people and able to
+                track the location and directions from their current location. Tech
+                Stack used: MongoDB, (Mongoose), Node.js, React, Express,Material-UI,
+                Mapbox-gl, ftp-mail, JWT (Authentication), Redux, (React-Redux),
+                React-swipeable-views
+              </p>
+            </div>
+            <div id="web-button" class="pro-navi">
+              <a href="https://food-waste-managements.netlify.app/#/" target="_blank"
+                >open website</a
+              >
+              <a
+                href="https://github.com/BALASHEKHAR/food-waste-management-client"
+                target="_blank"
+                >Git Repo</a
+              >
+            </div>
+          </div>
+      
+          <div data-aos="fade-left" class="project-img">
+            <img
+              class="img-a"
+              src="assets/images/118-1185326_computer-frames-for-youtube-videos-png.png"
+              alt=""
+            />
+            <img
+              id="web-img"
+              class="img-b"
+              src="assets/images/foodwaste.png"
+              alt=""
+            />
+          </div>
+        </div>
+      
+        <div class="project-main2">
+          <div data-aos="fade-left" class="project-img2">
+            <img
+              id="dark-back-img2"
+              class="img-a2"
+              src="assets/images/Subtract.png"
+              alt=""
+            />
+            <img
+              id="android-img"
+              class="img-b2"
+              src="assets/images/app0.png"
+              alt=""
+            />
+          </div>
+          <div data-aos="fade-right" class="projects-container1">
+            <div class="pro-buttons">
+              <i id="android-left" class="fas fa-arrow-circle-left"></i>
+              <i id="android-right" class="fas fa-arrow-circle-right"></i>
+            </div>
+            <div id="android-body" class="pro-desc">
+              <h2>More to Store</h2>
+              <br />
+              <p>
+                More-To-Store is an app where you can buy items like flipkart,
+                Amazon.Technologies used:Firebase Libraries(Realtime
+                database,storage,Authentication),Android Architecture components(View
+                Pager,Recycler withmultiple Items). Architecture used:MVC
+              </p>
+            </div>
+            <div id="android-button" class="pro-navi">
+              <a
+                target="_blank"
+                href="https://appetize.io/app/q1edkvrn3p9r3g13x8h0qx5904?device=nexus5&scale=75&orientation=portrait&osVersion=8.1"
+                >open website</a
+              >
+              <a target="_blank" href="https://github.com/BALASHEKHAR/moreToStore"
+                >Git Repo</a
+              >
+            </div>
+          </div>
+        </div>
+          
+
       <div id="experienceandacheivements" class="experience-container">
         <div data-aos="fade-up" id="start" class="experience-container-details">
           <h2>Experience</h2>
@@ -1084,63 +526,6 @@
             }px`;
           }
         }
-      });
-
-      ///tabs
-      const tab1 = document.getElementById("tab-1");
-      const tab2 = document.getElementById("tab-2");
-      const tab3 = document.getElementById("tab-3");
-      const tab4 = document.getElementById("tab-4");
-
-      const tab1icons = document.getElementById("tab-1-icons");
-      const tab2icons = document.getElementById("tab-2-icons");
-      const tab3icons = document.getElementById("tab-3-icons");
-      const tab4icons = document.getElementById("tab-4-icons");
-
-      tab1.addEventListener("click", () => {
-        tab1.className = "active";
-        tab2.className = "";
-        tab3.className = "";
-        tab4.className = "";
-
-        tab1icons.style.display = "flex";
-        tab2icons.style.display = "none";
-        tab3icons.style.display = "none";
-        tab4icons.style.display = "none";
-      });
-      tab2.addEventListener("click", () => {
-        tab1.className = "";
-        tab2.className = "active";
-        tab3.className = "";
-        tab4.className = "";
-
-        tab1icons.style.display = "none";
-        tab2icons.style.display = "flex";
-        tab3icons.style.display = "none";
-        tab4icons.style.display = "none";
-      });
-      tab3.addEventListener("click", () => {
-        tab1.className = "";
-        tab2.className = "";
-        tab3.className = "active";
-        tab4.className = "";
-
-        tab1icons.style.display = "none";
-        tab2icons.style.display = "none";
-        tab3icons.style.display = "flex";
-        tab4icons.style.display = "none";
-      });
-
-      tab4.addEventListener("click", () => {
-        tab1.className = "";
-        tab2.className = "";
-        tab3.className = "";
-        tab4.className = "active";
-
-        tab1icons.style.display = "none";
-        tab2icons.style.display = "none";
-        tab3icons.style.display = "none";
-        tab4icons.style.display = "flex";
       });
 
       //android projects
