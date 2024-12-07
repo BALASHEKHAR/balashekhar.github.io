@@ -13,7 +13,7 @@ function setAndroidProject(no) {
 
   switch (no) {
     case 0:
-      androidimg.src = "assets/images/app0.png";
+      androidimg.src = "../../assets/images/projects/app0.png";
       androidbody.getElementsByTagName("h2")[0].textContent = "More to Store";
       androidbody.getElementsByTagName("p")[0].textContent =
         "More-To-Store is an app where you can buy items like flipkart, Amazon.Technologies used:Firebase Libraries(Realtime database,storage,Authentication),Android Architecture components(View Pager,Recycler withmultiple Items). Architecture used:MVC";
@@ -24,7 +24,7 @@ function setAndroidProject(no) {
 
       break;
     case 1:
-      androidimg.src = "assets/images/app1.png";
+      androidimg.src = "../../assets/images/projects/app1.png";
       androidbody.getElementsByTagName("h2")[0].textContent = "Social Network";
       androidbody.getElementsByTagName("p")[0].textContent =
         "A simple social media app including chat feature and also this lets the users able to post. It has the following features :user login, sign up, and authentication Customize your user profile and their posts Following and unfollowing othersLiking, commenting, and saving other users posts; Technologies used : Java/XML,Firebase realtime databases and Firebase Authentication and Android Architecture components";
@@ -35,7 +35,7 @@ function setAndroidProject(no) {
 
       break;
     case 2:
-      androidimg.src = "assets/images/app2.png";
+      androidimg.src = "../../assets/images/projects/app2.png";
       androidbody.getElementsByTagName("h2")[0].textContent = "Weather";
       androidbody.getElementsByTagName("p")[0].textContent =
         "Weatherapp is a simple weather forecast app, which uses some APIs to fetch 5 day / 3 hour forecast data from the OpenWeatherMap and to fetch places,cities,counties,coords etc.";
@@ -46,7 +46,7 @@ function setAndroidProject(no) {
 
       break;
     default:
-      androidimg.src = "assets/images/app0.png";
+      androidimg.src = "../../assets/images/projects/app0.png";
       androidbody.getElementsByTagName("h2")[0].textContent =
         "Social Media App";
       androidbody.getElementsByTagName("p")[0].textContent =
@@ -66,7 +66,7 @@ function setWebProject(no) {
 
   switch (no) {
     case 0:
-      webimg.src = "assets/images/foodwaste.png";
+      webimg.src = "../../assets/images/projects/foodwaste.png";
       webbody.getElementsByTagName("h2")[0].textContent =
         "Food Waste Management";
       webbody.getElementsByTagName("p")[0].textContent =
@@ -78,7 +78,7 @@ function setWebProject(no) {
 
       break;
     case 1:
-      webimg.src = "assets/images/moretostore (1).png";
+      webimg.src = "../../assets/images/projects/moretostore (1).png";
       webbody.getElementsByTagName("h2")[0].textContent =
         "More to Store Admin Panel";
       webbody.getElementsByTagName("p")[0].textContent =
@@ -90,7 +90,7 @@ function setWebProject(no) {
 
       break;
     case 2:
-      webimg.src = "assets/images/corona.png";
+      webimg.src = "../../assets/images/projects/corona.png";
       webbody.getElementsByTagName("h2")[0].textContent =
         "Corona-Tracker Web App";
       webbody.getElementsByTagName("p")[0].textContent =
@@ -102,7 +102,7 @@ function setWebProject(no) {
 
       break;
     default:
-      webimg.src = "assets/images/foodwaste.png";
+      webimg.src = "../../assets/images/projects/foodwaste.png";
       webbody.getElementsByTagName("h2")[0].textContent =
         "Food Waste Management";
       webbody.getElementsByTagName("p")[0].textContent =
