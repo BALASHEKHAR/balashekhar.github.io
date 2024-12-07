@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="components/education/education.css" />
     <link rel="stylesheet" href="components/skills/skills.css" />
     <link rel="stylesheet" href="components/projects/projects.css" />
+    <link rel="stylesheet" href="components/journey/journey.css" />
     <link rel="stylesheet" href="components/footer/footer.css" />
 
     <!-- Custom JS -->
@@ -46,6 +47,7 @@
     <script src="components/education/education.js"></script>
     <script src="components/skills/skills.js"></script>
     <script src="components/projects/projects.js"></script>
+    <script src="components/journey/journey.js"></script>
     <script src="components/footer/footer.js"></script>
     <!-- Load Favicons -->
     <script src="favicon.js"></script>
@@ -81,94 +83,9 @@
       <div id="projects" class="projects"></div>
       <!-- projects component end -->
 
-      <div id="experienceandacheivements" class="experience-container">
-        <div data-aos="fade-up" id="start" class="experience-container-details">
-          <h2>Experience</h2>
-          <a id="startJ"><i class="fas fa-play"></i> View Journey</a>
-          <p>
-            <b>Tip:</b> Use the left and right arrow keys to move the car once
-            you click on the button above.
-          </p>
-        </div>
-        <div
-          data-aos="fade-down"
-          id="train"
-          class="animate_animated animate_bounceInDown experience-container-train"
-        >
-          <div
-            id="trainImg"
-            class="main-train"
-            style="background-position: 0px; transition: 0.5s ease"
-          >
-            <div class="carJ"><img src="assets/images/zeep.png" alt="" /></div>
-            <button id="closeJ" class="e-close">
-              <i class="fas fa-times"></i> close
-            </button>
-            <button id="leftJ" class="e-left">
-              <i class="fas fa-arrow-circle-left"></i>
-            </button>
-            <button id="rightJ" class="e-right">
-              <i class="fas fa-arrow-circle-right"></i>
-            </button>
-          </div>
-        </div>
-
-        <div
-          id="bubble"
-          data-aos="fade-up"
-          data-aos-offset="-200"
-          class="experience-container-bubbles"
-        >
-          <div
-            data-aos="fade-right"
-            data-aos-offset="-200"
-            data-aos-duration="0"
-            class="e-1"
-          ></div>
-          <div
-            data-aos="fade-up-right"
-            data-aos-offset="-200"
-            data-aos-duration="0"
-            class="e-2"
-          ></div>
-          <div
-            data-aos="fade-up"
-            data-aos-offset="-200"
-            data-aos-duration="0"
-            class="e-3"
-          ></div>
-          <div
-            data-aos="zoom-in-up"
-            data-aos-offset="-200"
-            data-aos-duration="0"
-            class="e-4"
-          ></div>
-          <div
-            data-aos="zoom-in-up"
-            data-aos-offset="-200"
-            data-aos-duration="0"
-            class="e-5"
-          ></div>
-          <div
-            data-aos="fade-up"
-            data-aos-offset="-200"
-            data-aos-duration="0"
-            class="e-6"
-          ></div>
-          <div
-            data-aos="fade-up-left"
-            data-aos-offset="-200"
-            data-aos-duration="0"
-            class="e-7"
-          ></div>
-          <div
-            data-aos="fade-left"
-            data-aos-offset="-200"
-            data-aos-duration="0"
-            class="e-8"
-          ></div>
-        </div>
-      </div>
+      <!-- journey component -->
+      <div id="journey" class="journey"></div>
+      <!-- journey component end -->
 
       <div id="contact" class="form-container">
         <div
@@ -340,86 +257,6 @@
           /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
       }
-      const start = document.getElementById("start");
-      const train = document.getElementById("train");
-      const bubble = document.getElementById("bubble");
-      const contact = document.getElementById("contact");
-
-      let open = false;
-
-      document.getElementById("startJ").addEventListener("click", () => {
-        open = true;
-        start.style.display = "none";
-        bubble.style.display = "none";
-        contact.style.backgroundImage = "linear-gradient(#fff,#fff)";
-        train.style.display = "flex";
-      });
-
-      window.addEventListener("resize", () => {
-        if (window.innerWidth < 940) {
-          bubble.style.display = "none";
-          contact.style.backgroundImage = "linear-gradient(#fff,#fff)";
-        } else {
-          bubble.style.display = "block";
-          contact.style.backgroundImage = `url(assets/images/pro.png)`;
-        }
-      });
-
-      document.getElementById("closeJ").addEventListener("click", () => {
-        open = false;
-        start.style.display = "flex";
-        if (window.innerWidth > 940) {
-          bubble.style.display = "block";
-          contact.style.backgroundImage = `url(assets/images/pro.png)`;
-        } else {
-          bubble.style.display = "none";
-          contact.style.backgroundImage = "linear-gradient(#fff,#fff)";
-        }
-        train.style.display = "none";
-      });
-
-      document.getElementById("rightJ").addEventListener("click", () => {
-        let x = parseInt(
-          document.getElementById("trainImg").style.backgroundPosition
-        );
-        if (window.innerWidth - x + 200 > 3650) x = 200;
-        document.getElementById("trainImg").style.backgroundPosition = `${
-          x - 200
-        }px`;
-      });
-
-      document.getElementById("leftJ").addEventListener("click", () => {
-        let x = parseInt(
-          document.getElementById("trainImg").style.backgroundPosition
-        );
-        if (x >= 0) x = -200;
-        document.getElementById("trainImg").style.backgroundPosition = `${
-          x + 200
-        }px`;
-      });
-
-      document.addEventListener("keyup", (e) => {
-        if (open) {
-          if (e.key === "ArrowLeft") {
-            let x = parseInt(
-              document.getElementById("trainImg").style.backgroundPosition
-            );
-            if (x >= 0) x = -200;
-            document.getElementById("trainImg").style.backgroundPosition = `${
-              x + 200
-            }px`;
-          }
-          if (e.key === "ArrowRight") {
-            let x = parseInt(
-              document.getElementById("trainImg").style.backgroundPosition
-            );
-            if (window.innerWidth - x + 200 > 3650) x = 200;
-            document.getElementById("trainImg").style.backgroundPosition = `${
-              x - 200
-            }px`;
-          }
-        }
-      });
     </script>
     <!-- mail to -->
     <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"></script>
