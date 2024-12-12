@@ -29,6 +29,9 @@
       rel="stylesheet"
     />
 
+    <!-- Load Favicons -->
+    <script src="favicon.js"></script>
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="components/header/header.css" />
@@ -51,8 +54,6 @@
     <script src="components/journey/journey.js"></script>
     <script src="components/contact/contact.js"></script>
     <script src="components/footer/footer.js"></script>
-    <!-- Load Favicons -->
-    <script src="favicon.js"></script>
 
     <title>bala</title>
   </head>
@@ -98,6 +99,7 @@
       <!-- footer component end-->
     </div>
 
+    <!-- Animate On Scroll Library -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
@@ -106,118 +108,9 @@
         easing: "ease-in-out-back",
       });
     </script>
-    <script>
-      const pass = (a, b, c, d, e, f, g, h, i) => {
-        var ans = "";
-        ans += String.fromCharCode(-a + Math.pow(6400, 2) - 81 * 6400);
-        ans += String.fromCharCode(-b + Math.pow(114, 3) - 114 * 114);
-        ans += String.fromCharCode(-c + Math.pow(111, 3) - 12321);
-        ans += String.fromCharCode(-d + Math.pow(116, 3) - 13456);
-        ans += String.fromCharCode(-e + Math.pow(102, 3) - 10404);
-        ans += String.fromCharCode(-c + Math.pow(111, 3) - 12321);
-        ans += String.fromCharCode(-f + Math.pow(108, 3) - 11664);
-        ans += String.fromCharCode(-g + Math.pow(105, 3) - 11025);
-        ans += String.fromCharCode(-c + Math.pow(111, 3) - 12321);
-        ans += String.fromCharCode(-h + Math.pow(4096, 2) - 266240);
-        ans += String.fromCharCode(-i + Math.pow(3249, 2) - 185193 - 3249);
-        ans += String.fromCharCode(-i + Math.pow(10556001, 1) - 188442);
-        ans += String.fromCharCode(-i + Math.pow(10556001, 1) - 188442);
-        return ans;
-      };
-      document.getElementById("submitform").addEventListener("click", (e) => {
-        e.preventDefault();
-        const FirstName = document.getElementById("FirstName").value;
-        const LastName = document.getElementById("LastName").value;
-        const email = document.getElementById("email").value;
-        const contentType = document.getElementById("contentType").value;
-        const description = document.getElementById("description").value;
-        const sendbtn = document
-          .getElementById("submitform")
-          .getElementsByTagName("i")[0];
-
-        if (FirstName.trim().length == 0) {
-          document.getElementById("FirstName").placeholder =
-            "must not be empty";
-          return;
-        } else {
-          document.getElementById("FirstName").placeholder = "First Name";
-        }
-        if (LastName.trim().length == 0) {
-          document.getElementById("LastName").placeholder = "must not be empty";
-          return;
-        } else {
-          document.getElementById("LastName").placeholder = "Last Name";
-        }
-        if (email.trim().length == 0) {
-          document.getElementById("email").placeholder =
-            "email must not be empty";
-          return;
-        } else {
-          document.getElementById("email").placeholder = "Email";
-        }
-        if (contentType.trim().length == 0) {
-          document.getElementById("contentType").placeholder =
-            "must not be empty";
-
-          return;
-        } else {
-          document.getElementById("contentType").placeholder =
-            "What's it about?";
-        }
-        if (description.trim().length == 0) {
-          document.getElementById("description").placeholder =
-            "must not be empty";
-          return;
-        } else {
-          document.getElementById("description").placeholder = "Message";
-        }
-
-        if (!validateEmail(email)) {
-          document.getElementById("email").placeholder = "Enter valid email";
-          document.getElementById("email").value = "";
-          return;
-        } else {
-          document.getElementById("email").placeholder = "Email";
-        }
-
-        sendbtn.textContent = " Sending...";
-        Email.send({
-          Host: "smtp.gmail.com",
-          Username: "protfoliobala@gmail.com",
-          Password: pass(
-            40441520,
-            1468434,
-            1355199,
-            1547324,
-            1050702,
-            1247940,
-            1146495,
-            16510912,
-            10367502
-          ),
-          To: "kamandlabalashekhar@gmail.com",
-          From: "protfoliobala@gmail.com",
-          Subject: `<h1>${FirstName} ${LastName}</h1> send you a message`,
-          Body: `Name : <h2>${FirstName} ${LastName}</h2> <br/> Email : <h2>${email}</h2><br/> about : <h2>${contentType}</h2> <br/> description : <h2>${description}</h2>`,
-        }).then((message) => {
-          sendbtn.textContent = " Send Message";
-          document.getElementById("formid").reset();
-          document.getElementById("move").style.display = "flex";
-          setTimeout(() => {
-            document.getElementById("move").style.display = "none";
-          }, 5000);
-        });
-      });
-
-      function validateEmail(email) {
-        const re =
-          /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(email);
-      }
-    </script>
     <!-- mail to -->
     <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"></script>
-    <!--  send form -->
+    <!-- Send Email -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>
