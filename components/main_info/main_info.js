@@ -11,7 +11,7 @@ function switchTheme() {
   btn.addEventListener("click", () => {
     if (darkmode === false) {
       document.getElementById("dark-back-img2").src =
-        "assets/images/subtractdark.jpg";
+        "../../assets/images/projects/subtractdark.jpg";
       darkmode = !darkmode;
 
       if (window.innerWidth > 700) {
@@ -38,7 +38,7 @@ function switchTheme() {
       head.appendChild(link);
     } else {
       document.getElementById("dark-back-img2").src =
-        "assets/images/Subtract.png";
+        "../../assets/images/projects/Subtract.png";
 
       darkmode = !darkmode;
       if (window.innerWidth > 700) {
