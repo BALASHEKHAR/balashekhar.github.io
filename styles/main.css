@@ -73,9 +73,6 @@ i:hover {
   background-color: #f87171;
 }
 
-.scale {
-  transform: scale(1.5);
-}
 
 .form-container {
   display: flex;
