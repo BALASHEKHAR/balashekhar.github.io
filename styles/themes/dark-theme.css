@@ -89,9 +89,22 @@ a:hover {
   color: #000 !important;
 }
 .form-container {
-  background-image: url("../../assets/images/pro2.png") !important;
+  background-image: url("../../assets/images/contact/pro2.png") !important;
   background-repeat: no-repeat !important;
 }
 .experience-container-bubbles div {
   background-color: #adb7c6 !important;
+}
+.aboutme-text a {
+  border: none !important;
+}
+.aboutme-text a:hover {
+  color: #c91093 !important;
+  border: none !important;
+}
+.info h4 a {
+  border: none !important;
+}
+.info h4 a:hover {
+  color: #c91093 !important;
 }

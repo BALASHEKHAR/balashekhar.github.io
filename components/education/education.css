@@ -3,7 +3,7 @@
 }
 
 .education-container h2 {
-  font-size: 40px;
+  font-size: 50px;
   color: #182d6c;
   margin: 20px;
   text-transform: capitalize;
@@ -144,7 +144,7 @@
 
 .graph .a {
   color: #fff;
-  width: 25px;
+  width: 20px;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
   display: flex;
@@ -172,9 +172,15 @@
 .graph .a6 {
   height: 73px;
 }
+.graph .a7 {
+  height: 71px;
+}
+.graph .a8 {
+  height: 72.6px;
+}
 
 .hr {
-  width: 85%;
+  width: 100%;
   margin: 0px auto;
   height: 3px;
   background-color: #000;

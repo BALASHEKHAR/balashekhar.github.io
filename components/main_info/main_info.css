@@ -62,8 +62,11 @@
   line-height: 1.5;
 }
 .info h4 a {
-  color: #182d6c;
   text-decoration: none;
+  color: #000;
+}
+.info h4 a:hover {
+  color: #ff4a00;
 }
 .info h1 {
   font-size: 50px;

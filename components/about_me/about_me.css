@@ -49,10 +49,14 @@
 }
 
 .aboutme-text a {
-  color: #182d6c;
   text-decoration: none;
+  color: #000;
+}
+.aboutme-text a:hover {
+  color: #ff4a00;
 }
 
+@media screen and (max-width: 700px) {
 @media screen and (max-width: 700px) {
   .aboutme-text h2,
   .aboutme-text p {
