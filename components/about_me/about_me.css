@@ -48,6 +48,11 @@
   font-family: "Inter", sans-serif;
 }
 
+.aboutme-text a {
+  color: #182d6c;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 700px) {
   .aboutme-text h2,
   .aboutme-text p {
