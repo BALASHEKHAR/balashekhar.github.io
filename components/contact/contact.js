@@ -68,22 +68,24 @@ function sendEmail() {
     }
 
     sendbtn.textContent = " Sending...";
-    Email.send({
-      Host: "smtp.gmail.com",
-      Username: "protfoliobala@gmail.com",
-      Password: "password",
-      To: "kamandlabalashekhar@gmail.com",
-      From: "protfoliobala@gmail.com",
-      Subject: `<h1>${FirstName} ${LastName}</h1> send you a message`,
-      Body: `Name : <h2>${FirstName} ${LastName}</h2> <br/> Email : <h2>${email}</h2><br/> about : <h2>${contentType}</h2> <br/> description : <h2>${description}</h2>`,
-    }).then((message) => {
+
+    emailjs.init("tQeXBSEJUfkTWaGIn");
+
+    emailjs.send("service_1s5hega", "template_e2tri79", {
+      to_name: "Bala",
+      from_name: `${FirstName} ${LastName} with email: ${email}`,
+      message: `about: ${contentType} & description: ${description}`,
+    });
+
+    setTimeout(() => {
       sendbtn.textContent = " Send Message";
       document.getElementById("formid").reset();
       document.getElementById("move").style.display = "flex";
-      setTimeout(() => {
-        document.getElementById("move").style.display = "none";
-      }, 5000);
-    });
+    }, 1000);
+
+    setTimeout(() => {
+      document.getElementById("move").style.display = "none";
+    }, 5000);
   });
 }
 
