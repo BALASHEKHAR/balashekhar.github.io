@@ -29,6 +29,11 @@
   margin-right: 5px;
 }
 
+/* steps to replace image
+1. check dimensions of image on https://www.posterburner.com
+2. change to image dimention to 738x738px
+3. crop image with https://circlecropimage.com/ */
+
 .imag {
   z-index: 100;
   flex: 1;

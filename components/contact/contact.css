@@ -29,10 +29,7 @@
 .form-name {
   display: flex;
   justify-content: space-around;
-  margin: 10px auto;
-}
-.form-name input {
-  margin: 0px 5px;
+  gap: 5px;
 }
 
 .form-details-wrapper textarea {
@@ -82,10 +79,6 @@ textarea {
   border-radius: 8px;
   border: 2px solid #182d6c;
 }
-/* textarea {
-  max-width: 600px;
-  max-height: 300px;
-} */
 #move {
   -webkit-animation: mover 1s infinite alternate;
   animation: mover 1s infinite alternate;
