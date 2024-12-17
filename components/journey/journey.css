@@ -70,6 +70,47 @@
   bottom: -15%;
   right: 28%;
 }
+
+.e-9 {
+  position: absolute;
+  top: 20%;
+  left: -15%;
+}
+.e-10 {
+  position: absolute;
+  top: 20%;
+  right: -15%;
+}
+
+.e-11 {
+  position: absolute;
+  bottom: -15%;
+  left: 40%;
+}
+.e-12 {
+  position: absolute;
+  top: 50%;
+  left: -15%;
+}
+
+.e-13 {
+  position: absolute;
+  top: 50%;
+  right: -15%;
+}
+
+.e-14 {
+  position: absolute;
+  bottom: -10%;
+  left: 7%;
+}
+
+.e-15 {
+  position: absolute;
+  bottom: -10%;
+  right: 7%;
+}
+
 .experience-container-main {
   position: relative;
   width: 100% !important;
