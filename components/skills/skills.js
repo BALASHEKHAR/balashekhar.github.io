@@ -10,57 +10,37 @@ function handleTabs() {
   const tab1 = document.getElementById("tab-1");
   const tab2 = document.getElementById("tab-2");
   const tab3 = document.getElementById("tab-3");
-  const tab4 = document.getElementById("tab-4");
 
   const tab1icons = document.getElementById("tab-1-icons");
   const tab2icons = document.getElementById("tab-2-icons");
   const tab3icons = document.getElementById("tab-3-icons");
-  const tab4icons = document.getElementById("tab-4-icons");
 
   tab1.addEventListener("click", () => {
     tab1.className = "active";
     tab2.className = "";
     tab3.className = "";
-    tab4.className = "";
 
     tab1icons.style.display = "flex";
     tab2icons.style.display = "none";
     tab3icons.style.display = "none";
-    tab4icons.style.display = "none";
   });
   tab2.addEventListener("click", () => {
     tab1.className = "";
     tab2.className = "active";
     tab3.className = "";
-    tab4.className = "";
 
     tab1icons.style.display = "none";
     tab2icons.style.display = "flex";
     tab3icons.style.display = "none";
-    tab4icons.style.display = "none";
   });
   tab3.addEventListener("click", () => {
     tab1.className = "";
     tab2.className = "";
     tab3.className = "active";
-    tab4.className = "";
 
     tab1icons.style.display = "none";
     tab2icons.style.display = "none";
     tab3icons.style.display = "flex";
-    tab4icons.style.display = "none";
-  });
-
-  tab4.addEventListener("click", () => {
-    tab1.className = "";
-    tab2.className = "";
-    tab3.className = "";
-    tab4.className = "active";
-
-    tab1icons.style.display = "none";
-    tab2icons.style.display = "none";
-    tab3icons.style.display = "none";
-    tab4icons.style.display = "flex";
   });
 }
 
