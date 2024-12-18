@@ -102,120 +102,120 @@ function drop(ev) {
   const bar = document.getElementById("drop-bar-line-value");
 
   switch (it.id) {
-    case "react-logo":
+    case "ruby":
       addDetails(
-        "React Js",
-        "React is an open-source front-end JavaScript library developed by Facebook for building user interfaces or UI components.",
+        "Ruby",
+        "Ruby is an open-source, interpreted, dynamic, object-oriented programming language that emphasizes code readability.",
         "5",
         "0.4"
       );
       bar.style.width = "65%";
       addscale(65);
       break;
-    case "js-logo":
+    case "go":
       addDetails(
-        "Node Js",
-        "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that executes JavaScript code outside a web browser.",
+        "Go",
+        "Go is an open-source, interpreted, dynamic, object-oriented programming language that emphasizes code readability.",
         "5",
         "0.6"
       );
       bar.style.width = "60%";
       addscale(60);
       break;
-    case "firebase-logo":
+    case "c_lang":
       addDetails(
-        "Firebase",
-        "Firebase is a cloud platform that includes services like analytics, authentication, realtime databases, configuration, file storage.",
+        "C",
+        "C is a general-purpose, procedural, imperative computer programming language. It can be used to develop software like operating systems, databases, compilers, and so on.",
         "5",
         "1"
       );
       bar.style.width = "55%";
       addscale(55);
       break;
-    case "mongodo-logo":
+    case "cpp":
       addDetails(
-        "Mongo DB",
-        "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program.",
+        "C++",
+        "C++ is a powerful general-purpose programming language it supports different ways of programming like procedural, object-oriented, functional, etc,.",
         "2",
         "0.4"
       );
       bar.style.width = "60%";
       addscale(60);
       break;
-    case "express-logo":
+    case "python":
       addDetails(
-        "Express Js",
-        "Express.js, or simply Express, is a back end web application framework for Node.js, it is designed for building web applications and APIs.",
+        "Python",
+        "Python is an interpreted, high-level, general-purpose programming language. Its design philosophy emphasizes code readability with its use of significant indentation.",
         "6",
         "0.5"
       );
       bar.style.width = "65%";
       addscale(65);
       break;
-    case "android-logo":
+    case "java":
       addDetails(
-        "Android",
-        "Android Studio is Android's official IDE. It is purpose-built for Android to accelerate your development and help you build the highest-quality apps for every Android device.",
+        "Java",
+        "Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
         "6",
         "1"
       );
       bar.style.width = "67%";
       addscale(67);
       break;
-    case "java-logo":
+    case "html":
       addDetails(
-        "Java",
-        "One of the most widely used programming languages, Java is used as the server-side language for most back-end development projects, including those involving big data and Android development.",
+        "HTML",
+        "HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.",
         "2",
         "0.1"
       );
       bar.style.width = "40%";
       addscale(40);
       break;
-    case "ds-logo":
+    case "css":
       addDetails(
-        "Data Structures",
-        "data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data, i.e., it is an algebraic structure about data",
+        "CSS",
+        "CSS is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.",
         "-",
         "-"
       );
       bar.style.width = "60%";
       addscale(60);
       break;
-    case "materialui-logo":
+    case "javascript":
       addDetails(
-        "Material UI",
-        "Material-UI is an open-source project that features React components that implement Google's Material Design.",
+        "JavaScript",
+        "JavaScript is a high-level, interpreted programming language that conforms to the ECMAScript specification. It is a language that is characterized as dynamic, weakly typed, prototype-based and multi-paradigm.",
         "3",
         "0.4"
       );
       bar.style.width = "70%";
       addscale(70);
       break;
-    case "cplusplus-logo":
+    case "react":
       addDetails(
-        "C++",
-        "C++ is a powerful general-purpose programming language it supports different ways of programming like procedural, object-oriented, functional, etc,.",
+        "React",
+        "React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.",
         "1",
         "1"
       );
       bar.style.width = "80%";
       addscale(80);
       break;
-    case "algo-logo":
+    case "nodejs":
       bar.style.width = "70%";
       addDetails(
-        "Algorithm",
-        "Algorithm is a step-by-step procedure, which defines a set of instructions to be executed in a certain order to get the desired output. and are generally created independent of underlying languages",
+        "NodeJS",
+        "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that executes JavaScript code outside a web browser.",
         "1",
         "1"
       );
       addscale(70);
       break;
-    case "c-logo":
+    case "android":
       addDetails(
-        "C",
-        "C programming is a general-purpose, procedural, imperative computer programming language. It can be used to develop software like operating systems, databases, compilers, and so on.",
+        "Android",
+        "Android Studio is Android's official IDE. It is purpose-built for Android to accelerate your development and help you build the highest-quality apps for every Android device.",
         "1",
         "1"
       );
@@ -223,40 +223,40 @@ function drop(ev) {
       addscale(70);
       break;
 
-    case "figma-logo":
+    case "mysql":
       addDetails(
-        "Figma",
-        "Figma is a web-based graphics editing and user interface design app. You can use it to do all kinds of graphic design work from wireframing websites, designing mobile app interfaces, prototyping designs, crafting social media posts, and everything in between",
+        "MySQL",
+        "MySQL is an open-source relational database management system. It is used to store data in a structured format, allowing for efficient retrieval and manipulation of data.",
         "1",
         "0.4"
       );
       bar.style.width = "40%";
       addscale(40);
       break;
-    case "css-logo":
+    case "mongo":
       addDetails(
-        "CSS",
-        "Cascading Style Sheets, fondly referred to as CSS, is a simple design language intended to simplify the process of making web pages presentable. CSS handles the look and feel part of a web page",
+        "MongoDB",
+        "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program.",
         "5",
         "1"
       );
       bar.style.width = "75%";
       addscale(75);
       break;
-    case "xml-logo":
+    case "firebase":
       addDetails(
-        "XML",
-        "An XML file is an extensible markup language file, and it is used to structure data for storage and transport. In an XML file, there are both tags and text.",
+        "Firebase",
+        "Firebase is a cloud platform that includes services like analytics, authentication, realtime databases, configuration, file storage.",
         "4",
         "0.4"
       );
       bar.style.width = "65%";
       addscale(65);
       break;
-    case "bootstrap-logo":
+    case "ga":
       addDetails(
-        "Bootstrap",
-        "Bootstrap is a potent front-end framework used to create modern websites and web apps. It's open-source and free to use, yet features numerous HTML and CSS templates for UI interface elements such as buttons and forms.",
+        "GA",
+        "Google Analytics is a free web analytics service that provides detailed statistics about the visitors to a website, and also provides tools for website owners to track and improve their website's performance.",
         "3",
         "0.4"
       );
@@ -264,37 +264,126 @@ function drop(ev) {
       addscale(65);
       break;
 
-    case "git-logo":
+    case "oauth":
       addDetails(
-        "Git",
-        "Git tracks the changes you make to files, so you have a record of what has been done, and you can revert to specific versions should you ever need to. Git also makes collaboration easier, allowing changes by multiple people to all be merged into one source.",
+        "OAuth",
+        "OAuth is an open-standard authorization protocol or framework that describes how unrelated servers and services can safely allow authenticated access to their assets without actually sharing the initial, related, credentials.",
         "-",
         "1"
       );
       bar.style.width = "33%";
       addscale(33);
       break;
-    case "postman-logo":
+    case "openid":
       addDetails(
-        "Postman",
-        "Postman is an API client that makes it easy for developers to create, share, test and document APIs. This is done by allowing users to create and save simple and complex HTTP/s requests, as well as read their responses.",
+        "OpenID",
+        "OpenID is an open-standard authorization protocol or framework that describes how unrelated servers and services can safely allow authenticated access to their assets without actually sharing the initial, related, credentials.",
         "-",
         "-"
       );
       bar.style.width = "40%";
       addscale(40);
       break;
-    case "msexcel-logo":
+    case "saml":
       addDetails(
-        "MS Excel",
-        "Excel is typically used to organize data and perform financial analysis. It is used across all business functions and at companies from small to large.",
+        "SAML",
+        "SAML is a standard for exchanging authentication and authorization data between security domains.",
         "-",
         "1"
       );
       bar.style.width = "40%";
       addscale(40);
       break;
-
+    case "passkey":
+      addDetails(
+        "Passkey",
+        "Passkey is a passwordless authentication method that uses biometric data to verify the user's identity.",
+        "-",
+        "1"
+      );
+      bar.style.width = "40%";
+      addscale(40);
+      break;
+    case "grpc":
+      addDetails(
+        "gRPC",
+        "gRPC is a high-performance, open-source universal RPC framework that puts mobile and HTTP/2 first.",
+        "-",
+        "1"
+      );
+      bar.style.width = "40%";
+      addscale(40);
+      break;
+    case "docker":
+      addDetails(
+        "Docker",
+        "Docker is a platform for building, shipping, and running applications in containers.",
+        "-",
+        "1"
+      );
+      bar.style.width = "40%";
+      addscale(40);
+      break;
+    case "k8s":
+      addDetails(
+        "Kubernetes",
+        "Kubernetes is an open-source container orchestration platform that automates deployment, scaling, and management of containerized applications.",
+        "-",
+        "1"
+      );
+      bar.style.width = "40%";
+      addscale(40);
+      break;
+    case "aws":
+      addDetails(
+        "AWS",
+        "Amazon Web Services (AWS) is a cloud computing platform that provides a wide range of services, including computing, storage, databases, and analytics.",
+        "-",
+        "1"
+      );
+      bar.style.width = "40%";
+      addscale(40);
+      break;
+    case "terraform":
+      addDetails(
+        "Terraform",
+        "Terraform is an open-source infrastructure as code tool that allows you to define and manage your infrastructure in a declarative way.",
+        "-",
+        "1"
+      );
+      bar.style.width = "40%";
+      addscale(40);
+      break;
+    case "ci_cd":
+      addDetails(
+        "CI/CD",
+        "CI/CD is a process for automating the delivery of software updates to production.",
+        "-",
+        "1"
+      );
+      bar.style.width = "40%";
+      addscale(40);
+      break;
+    case "cloudflare":
+      addDetails(
+        "Cloudflare",
+        "Cloudflare is a cloud computing platform that provides a wide range of services, including computing, storage, databases, and analytics.",
+        "-",
+        "1"
+      );
+      bar.style.width = "40%";
+      addscale(40);
+      break;
+    case "datadog":
+      addDetails(
+        "Datadog",
+        "Datadog is a cloud computing platform that provides a wide range of services, including computing, storage, databases, and analytics.",
+        "-",
+        "1"
+      );
+      bar.style.width = "40%";
+      addscale(40);
+      break;
     default:
       addDetails(
         "Drop a Skill",
