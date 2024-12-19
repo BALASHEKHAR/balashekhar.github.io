@@ -41,3 +41,8 @@
   padding: 2px;
   margin: 4px;
 }
+
+.footer-des span {
+  font-size: 9px;
+  text-decoration: none;
+}
