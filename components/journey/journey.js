@@ -27,7 +27,7 @@ function LoadJourneyListener() {
       contact.style.backgroundImage = "linear-gradient(#fff,#fff)";
     } else {
       bubble.style.display = "block";
-      contact.style.backgroundImage = `url(../../assets/images/journey/pro.png)`;
+      contact.style.backgroundImage = `url(../../assets/images/contact/bg.png)`;
     }
   });
 
@@ -36,7 +36,7 @@ function LoadJourneyListener() {
     start.style.display = "flex";
     if (window.innerWidth > 940) {
       bubble.style.display = "block";
-      contact.style.backgroundImage = `url(../../assets/images/journey/pro.png)`;
+      contact.style.backgroundImage = `url(../../assets/images/contact/bg.png)`;
     } else {
       bubble.style.display = "none";
       contact.style.backgroundImage = "linear-gradient(#fff,#fff)";
