@@ -50,7 +50,22 @@
   object-fit: contain;
   opacity: 0.2;
 }
-
+.gradient-transparent {
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.8) 30%,
+    rgba(0, 0, 0, 0.9) 60%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  mask-image: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.8) 30%,
+    rgba(0, 0, 0, 0.9) 60%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
 .info {
   flex: 1;
   height: 100%;
