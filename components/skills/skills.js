@@ -105,19 +105,19 @@ function drop(ev) {
     case "ruby":
       addDetails(
         "Ruby",
-        "Ruby is an open-source, interpreted, dynamic, object-oriented programming language that emphasizes code readability.",
-        "5",
-        "0.4"
+        "I joined Money Forward as a Ruby on Rails developer and have worked on multiple projects and have a good understanding of the language.",
+        "3",
+        "2"
       );
-      bar.style.width = "65%";
-      addscale(65);
+      bar.style.width = "80%";
+      addscale(80);
       break;
     case "go":
       addDetails(
         "Go",
-        "Go is an open-source, interpreted, dynamic, object-oriented programming language that emphasizes code readability.",
-        "5",
-        "0.6"
+        "I also engaged in GO projects at Money Forward which was used in microservices at the company.",
+        "2",
+        "1"
       );
       bar.style.width = "60%";
       addscale(60);
@@ -125,102 +125,102 @@ function drop(ev) {
     case "c_lang":
       addDetails(
         "C",
-        "C is a general-purpose, procedural, imperative computer programming language. It can be used to develop software like operating systems, databases, compilers, and so on.",
-        "5",
-        "1"
+        "This is my first language I have learned during my college days during my 1st year.",
+        "1",
+        "2"
       );
-      bar.style.width = "55%";
-      addscale(55);
+      bar.style.width = "70%";
+      addscale(70);
       break;
     case "cpp":
       addDetails(
         "C++",
-        "C++ is a powerful general-purpose programming language it supports different ways of programming like procedural, object-oriented, functional, etc,.",
-        "2",
-        "0.4"
+        "Through C++ I have learned about OOPs and algorithms. I basically use C++ for competitive programming and understanding the core concepts of programming.",
+        "1",
+        "2"
       );
-      bar.style.width = "60%";
-      addscale(60);
+      bar.style.width = "70%";
+      addscale(70);
       break;
     case "python":
       addDetails(
         "Python",
-        "Python is an interpreted, high-level, general-purpose programming language. Its design philosophy emphasizes code readability with its use of significant indentation.",
-        "6",
-        "0.5"
+        "I have a little experience with python. But i want to learn more about it in future if i get a chance.",
+        "1",
+        "0.4"
       );
-      bar.style.width = "65%";
-      addscale(65);
+      bar.style.width = "40%";
+      addscale(40);
       break;
     case "java":
       addDetails(
         "Java",
-        "Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
-        "6",
-        "1"
+        "I started learning Java when I wanted to do Android development. It was fun learning it while developing Android apps with my friends.",
+        "1",
+        "0.6"
       );
-      bar.style.width = "67%";
-      addscale(67);
+      bar.style.width = "60%";
+      addscale(60);
       break;
     case "html":
       addDetails(
         "HTML",
-        "HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.",
-        "2",
-        "0.1"
+        "HTML is the standard markup language for documents designed to be displayed in a web browser. I learned it as a part of my web development",
+        "5",
+        "5"
       );
-      bar.style.width = "40%";
-      addscale(40);
+      bar.style.width = "80%";
+      addscale(80);
       break;
     case "css":
       addDetails(
         "CSS",
         "CSS is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.",
-        "-",
-        "-"
+        "5",
+        "5"
       );
-      bar.style.width = "60%";
-      addscale(60);
+      bar.style.width = "80%";
+      addscale(80);
       break;
     case "javascript":
       addDetails(
         "JavaScript",
-        "JavaScript is a high-level, interpreted programming language that conforms to the ECMAScript specification. It is a language that is characterized as dynamic, weakly typed, prototype-based and multi-paradigm.",
-        "3",
-        "0.4"
+        "JavaScript is a high-level, interpreted programming language that conforms to the ECMAScript specification. This is the language i have used the most in my projects.",
+        "5",
+        "5"
       );
-      bar.style.width = "70%";
-      addscale(70);
+      bar.style.width = "80%";
+      addscale(80);
       break;
     case "react":
       addDetails(
         "React",
-        "React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.",
-        "1",
-        "1"
+        "React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It let me build web apps with ease.",
+        "5",
+        "5"
       );
       bar.style.width = "80%";
       addscale(80);
       break;
     case "nodejs":
-      bar.style.width = "70%";
+      bar.style.width = "80%";
       addDetails(
         "NodeJS",
         "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that executes JavaScript code outside a web browser.",
-        "1",
-        "1"
+        "4",
+        "4"
       );
-      addscale(70);
+      addscale(80);
       break;
     case "android":
       addDetails(
         "Android",
         "Android Studio is Android's official IDE. It is purpose-built for Android to accelerate your development and help you build the highest-quality apps for every Android device.",
-        "1",
-        "1"
+        "2",
+        "2"
       );
-      bar.style.width = "70%";
-      addscale(70);
+      bar.style.width = "80%";
+      addscale(80);
       break;
 
     case "mysql":
